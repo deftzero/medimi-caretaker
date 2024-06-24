@@ -1,0 +1,15 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "doctors": "Doctors",
+    "patients": "Patients",
+    "agenda": "Agenda",
+    "services": "Services",
+    "motives": "Motives",
+    "diagnostics": "Diagnostics",
+    "users": "Users",
+    "statisticsIndicators": "Statistics Indicators",
+    "liteAccounting": "Lite Accounting",
+    "informationQueue": "Information Queue"
+  }
+}
