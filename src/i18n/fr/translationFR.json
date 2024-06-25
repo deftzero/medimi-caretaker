@@ -11,5 +11,21 @@
     "statisticsIndicators": "Statistics Indicators",
     "liteAccounting": "Lite Accounting",
     "informationQueue": "Information Queue"
+  },
+  "users": {
+    "title": "Users FR",
+    "download": "Download FR",
+    "create": "Create FR",
+    "service": "Service FR",
+    "table": {
+      "name": "Name FR",
+      "phoneNumber": "Phone Number FR",
+      "email": "Email FR",
+      "roles": "Roles FR",
+      "actions": "Actions FR"
+    }
+  },
+  "user": {
+    "title": "User Details FR"
   }
 }

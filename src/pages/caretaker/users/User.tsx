@@ -3,13 +3,15 @@ import ChevronLeft from '../../../assets/icons/chevron-left.svg?react'
 import { IUser } from "../../../interfaces";
 import { usersData } from "../../../data";
 import { Typography } from "antd";
+import { useTranslation } from "react-i18next";
 
 const { Title } = Typography;
 
 
 export default function User() {
 
-  let { id } = useParams();
+  const { id } = useParams();
+  const { t } = useTranslation()
   const data: IUser = usersData.find((item: IUser) => item.id === id)!
 
   return (
@@ -18,7 +20,9 @@ export default function User() {
         <Link to={'/users'}>
           <ChevronLeft />
         </Link>
-        <Title level={3} className='mt-2'>User Details</Title>
+        <Title level={3} className='mt-2'>
+          {t('user.title')}
+        </Title>
       </div>
 
       <div className="bg-white p-5 rounded-md">
