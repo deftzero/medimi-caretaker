@@ -27,5 +27,20 @@
   },
   "user": {
     "title": "User Details"
+  },
+  "dashboard":{
+    "title": "Welcome back, {{name}}",
+    "subTitle": "Your Synthetic Dashboard",
+    "appointmentsStats": "Appointments Stats",
+    "statsLabels": {
+      "total": "Total",
+      "closed": "Closed",
+      "pending": "Pending",
+      "cancelled": "Cancelled"
+    },
+    "statsView": "Weekly",
+    "publications": "Publications",
+    "upcomingAppointments": "Upcoming Appointments",
+    "facility": "Medical Facility"
   }
 }

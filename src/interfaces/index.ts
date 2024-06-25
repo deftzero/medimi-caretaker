@@ -8,3 +8,14 @@ export interface IUser {
   createdAt?: Date;
   status?: string
 }
+
+export interface IAppointmentsDashboard{
+  doctor: string;
+  type: string;
+  time: string;
+}
+
+export interface IPublicationsDashoard {
+  title: string;
+  facility: string;
+}
