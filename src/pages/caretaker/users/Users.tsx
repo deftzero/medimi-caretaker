@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 
 
-const { Title } = Typography;
+const { Title, } = Typography;
 
 export default function Users() {
   const { t } = useTranslation();
