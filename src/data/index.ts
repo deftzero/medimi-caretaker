@@ -51,25 +51,25 @@ export const appointmentsStatsData = (t: TFunction<"translation", undefined>) =>
   datasets: [
     {
       label: t("dashboard.statsLabels.total"),
-      backgroundColor: "#34D399", 
+      backgroundColor: "#2b7f75", 
       ...datasetsBarStyles,
       data: [10, 18, 22, 12, 14, 12, 16],
     },
     {
       label: t("dashboard.statsLabels.closed"),
-      backgroundColor: "#3B82F6", 
+      backgroundColor: "#6ac4ae", 
       ...datasetsBarStyles,
       data: [12, 16, 18, 14, 12, 14, 18],
     },
     {
       label: t("dashboard.statsLabels.pending"),
-      backgroundColor: "#FBBF24", 
+      backgroundColor: "#f86624", 
       ...datasetsBarStyles,
       data: [8, 12, 26, 10, 10, 8, 6],
     },
     {
       label: t("dashboard.statsLabels.cancelled"),
-      backgroundColor: "#F87171", 
+      backgroundColor: "#ffd66b", 
       ...datasetsBarStyles,
       data: [5, 6, 8, 7, 6, 5, 2],
     },

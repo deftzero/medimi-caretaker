@@ -78,7 +78,7 @@ const Dashboard = () => {
                   xs={24}
                     className="flex items-center justify-start"
                   >
-                    <Text className="!mb-0 whitespace-nowrap !mr-2">
+                    <Text className="!mb-0 whitespace-nowrap !mr-2 text-slate-500">
                       {t("dashboard.facility")}:
                     </Text>
                     <Title level={5} className="!m-0">
