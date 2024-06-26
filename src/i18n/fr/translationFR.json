@@ -36,12 +36,12 @@
       "total": "Total FR",
       "closed": "Closed FR",
       "pending": "Pending FR",
-      "cancelled": "Cancelled"
+      "cancelled": "Cancelled FR"
     },
     "statsView": "Weekly FR",
     "publications": "Publications FR",
     "upcomingAppointments": "Upcoming Appointments FR",
-    "facility": "Medical Facility"
+    "facility": "Medical Facility FR"
   },
   "diagnosis": {
     "title": "Diagnosis FR",
@@ -51,7 +51,7 @@
     "table": {
       "wording": "Wording FR",
       "service": "Service FR",
-      "actions": "Actions"
+      "actions": "Actions FR"
     },
     "modal": {
       "title": "Create a New Diagnosis FR",
@@ -63,8 +63,17 @@
         "service": "Service FR",
         "servicePlaceholder": "Please select a service! FR",
         "description": "Description FR",
-        "descriptionPlaceholder": "Please input the description!"
+        "descriptionPlaceholder": "Please input the description! FR"
       }
     }
+  },
+  "singleDiagnosis": {
+    "title": "Diagnostics {{name}} FR",
+    "details": {
+      "wording": "Wording FR",
+      "service": "Service FR",
+      "description": "Description FR"
+    },
+    "edit": "Edit FR"
   }
 }
