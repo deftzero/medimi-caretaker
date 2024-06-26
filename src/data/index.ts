@@ -1,5 +1,5 @@
 import { TFunction } from "i18next";
-import { IAppointmentsDashboard, IPublicationsDashoard, IUser } from "../interfaces"
+import { IAppointmentsDashboard, IDiagnosis, IPublicationsDashoard, IUser } from "../interfaces"
 import { MenuProps } from "antd";
 
 
@@ -156,3 +156,13 @@ export const appointmentsStatsDropdownItems = (t: TFunction<"translation", undef
     key: "2",
   },
 ]);
+
+export const diagnosisData: IDiagnosis[] = [
+  { id: 1, wording: "Fatigue", service: "General Medicine" },
+  { id: 2, wording: "Indigestion", service: "General Medicine" },
+  { id: 3, wording: "Erythematous angina", service: "General Medicine" },
+  { id: 4, wording: "Erythematopultaceous angina", service: "General Medicine" },
+  { id: 5, wording: "Otitis externa", service: "General Medicine" },
+  { id: 6, wording: "Flu", service: "General Medicine" },
+  { id: 7, wording: "Primary hypertension", service: "General Medicine" },
+];

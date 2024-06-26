@@ -27,5 +27,44 @@
   },
   "user": {
     "title": "User Details FR"
+  },
+  "dashboard":{
+    "title": "Welcome back, {{name}} FR",
+    "subTitle": "Your Synthetic Dashboard FR",
+    "appointmentsStats": "Appointments Stats FR",
+    "statsLabels": {
+      "total": "Total FR",
+      "closed": "Closed FR",
+      "pending": "Pending FR",
+      "cancelled": "Cancelled"
+    },
+    "statsView": "Weekly FR",
+    "publications": "Publications FR",
+    "upcomingAppointments": "Upcoming Appointments FR",
+    "facility": "Medical Facility"
+  },
+  "diagnosis": {
+    "title": "Diagnosis FR",
+    "download": "Download FR",
+    "create": "Create FR",
+    "service": "Service FR",
+    "table": {
+      "wording": "Wording FR",
+      "service": "Service FR",
+      "actions": "Actions"
+    },
+    "modal": {
+      "title": "Create a New Diagnosis FR",
+      "okText": "Save FR",
+      "cancelText": "Cancel FR",
+      "form": {
+        "wording": "Wording FR",
+        "wordingPlaceholder": "Please input the wording! FR",
+        "service": "Service FR",
+        "servicePlaceholder": "Please select a service! FR",
+        "description": "Description FR",
+        "descriptionPlaceholder": "Please input the description!"
+      }
+    }
   }
 }
