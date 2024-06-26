@@ -38,6 +38,14 @@ export const serviceOptions: any = [
     name: 'Service B'
   }
 ]
+export const rolesOptions = [
+  { id: "Facility Staff", name: "Facility Staff" },
+  { id: "Facility Admin", name: "Facility Admin" },
+  { id: "Facility Manager", name: "Facility Manager" },
+  { id: "Facility Technician", name: "Facility Technician" },
+  { id: "Facility Secretary", name: "Facility Secretary" }
+];
+
 const datasetsBarStyles ={
   borderColor: "transparent",
   borderWidth: 3,

@@ -23,6 +23,24 @@
       "email": "Email FR",
       "roles": "Roles FR",
       "actions": "Actions FR"
+    },
+    "modal": {
+      "title": "Create a User FR",
+      "editTitle": "Edit User FR",
+      "okText": "Save FR",
+      "cancelText": "Cancel FR",
+      "form": {
+        "name": "Name FR",
+        "namePlaceholder": "Please enter the name FR",
+        "phoneNumber": "Phone Number FR",
+        "phoneNumberPlaceholder": "Please enter the phone number FR",
+        "email": "Email FR",
+        "emailPlaceholder": "Please enter the email FR",
+        "password": "Password FR",
+        "passwordPlaceholder": "Please enter the password FR",
+        "roles": "Roles FR",
+        "rolesPlaceholder": "Please select a role FR"
+      }
     }
   },
   "user": {
