@@ -25,3 +25,15 @@ export interface IDiagnosis {
   wording: string;
   service: string;
 }
+
+export interface ICreateDiagnosisModal {
+  visible: boolean;
+  onCreate: (values: any) => void;
+  onCancel: () => void;
+}
+export interface IUpsertUserModal {
+  visible: boolean;
+  onCreate: (values: any) => void;
+  onCancel: () => void;
+  initialValues?: any;
+}

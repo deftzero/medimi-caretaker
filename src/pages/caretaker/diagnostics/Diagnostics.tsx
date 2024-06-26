@@ -2,7 +2,7 @@ import { Input, Select, Space, Table, TableProps, Typography } from "antd";
 import AppButton from "../../../components/ui/AppButton";
 import Search from '../../../assets/icons/search.svg?react';
 import Eye from '../../../assets/icons/eye.svg?react';
-import Pencil from '../../../assets/icons/pencil.svg?react';
+import Pencil from '../../../assets/icons/white-pencil.svg?react';
 import Reload from '../../../assets/icons/reload.svg?react';
 import Plus from '../../../assets/icons/plus.svg?react';
 import Download from '../../../assets/icons/download.svg?react';

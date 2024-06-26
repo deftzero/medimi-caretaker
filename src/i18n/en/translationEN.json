@@ -23,6 +23,24 @@
       "email": "Email",
       "roles": "Roles",
       "actions": "Actions"
+    },
+    "modal": {
+      "title": "Create a User",
+      "editTitle": "Edit User",
+      "okText": "Save",
+      "cancelText": "Cancel",
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Please enter the name",
+        "phoneNumber": "Phone Number",
+        "phoneNumberPlaceholder": "Please enter the phone number",
+        "email": "Email",
+        "emailPlaceholder": "Please enter the email",
+        "password": "Password",
+        "passwordPlaceholder": "Please enter the password",
+        "roles": "Roles",
+        "rolesPlaceholder": "Please select a role"
+      }
     }
   },
   "user": {

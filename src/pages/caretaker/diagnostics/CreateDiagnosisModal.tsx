@@ -2,16 +2,11 @@
 import { Modal, Form, Input, Select, Row, Col } from "antd";
 import { useTranslation } from "react-i18next";
 import { serviceOptions } from "../../../data";
+import { ICreateDiagnosisModal } from "../../../interfaces";
 
 const { Option } = Select;
 
-interface CreateDiagnosisModalProps {
-  visible: boolean;
-  onCreate: (values: any) => void;
-  onCancel: () => void;
-}
-
-const CreateDiagnosisModal: React.FC<CreateDiagnosisModalProps> = ({
+const CreateDiagnosisModal: React.FC<ICreateDiagnosisModal> = ({
   visible,
   onCreate,
   onCancel,
