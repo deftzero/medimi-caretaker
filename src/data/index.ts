@@ -174,3 +174,63 @@ export const diagnosisData: IDiagnosis[] = [
   { id: '6', wording: "Flu", service: "General Medicine" },
   { id: '7', wording: "Primary hypertension", service: "General Medicine" },
 ];
+
+export const servicesDropdownOptions = [
+  { id: 1, name: "Cardiology" },
+  { id: 2, name: "General Medicine" },
+  { id: 3, name: "Pediatrics" },
+  { id: 4, name: "Orthopedics" },
+  { id: 5, name: "Neurology" },
+  { id: 6, name: "Oncology" }
+];
+
+export const servicesData:any = [
+  {
+    key: '1',
+    name: "Cardiology",
+    description: "Cardiology service",
+    headOfService: "Dr. Sarah Johnson",
+    serviceAssistants: "Jane Doe",
+    subSpecialities: [
+      "Dental Care",
+      "Cardiology",
+      "Oral and Maxillofacial Surgery",
+      "Pediatric Dentistry"
+    ],
+    expertises: [
+      "Echocardiography",
+      "Hypertension Management",
+      "Heart Failure Management",
+      "Lipid Disorders"
+    ],
+    stamp: {
+      doctorName: "Dr. Emily Smith",
+      medicalFacility: "Elmwood Medical Center, 123 Main Street, Anytown, USA",
+      dateOfVisit: "March 18, 2024",
+      medicalLicense: "MD123456789"
+    }
+  },
+  {
+    key: '2',
+    name: "General Medicine",
+    description: "General Medicine service",
+    headOfService: "Dr. Michael Smith",
+    serviceAssistants: "John Doe",
+    subSpecialities: [
+      "Internal Medicine",
+      "Preventive Care",
+      "Geriatric Medicine"
+    ],
+    expertises: [
+      "Chronic Disease Management",
+      "Diabetes Care",
+      "Hypertension Management"
+    ],
+    stamp: {
+      doctorName: "Dr. Anne Marie",
+      medicalFacility: "Sunrise Medical Center, 456 Oak Avenue, Anytown, USA",
+      dateOfVisit: "April 10, 2024",
+      medicalLicense: "MD987654321"
+    }
+  }
+];

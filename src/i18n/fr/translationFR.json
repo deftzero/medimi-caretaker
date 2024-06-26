@@ -93,5 +93,32 @@
       "description": "Description FR"
     },
     "edit": "Edit FR"
+  },
+  "services": {
+    "title": "Services FR",
+    "download": "Download FR",
+    "create": "Create FR",
+    "service": "Service FR",
+    "table": {
+      "name": "Name FR",
+      "headOfService": "Head of Service FR",
+      "actions": "Actions FR"
+    },
+    "modal": {
+      "title": "Create a service FR",
+      "editTitle": "Edit a service FR",
+      "okText": "Save FR",
+      "cancelText": "Cancel FR",
+      "form": {
+        "startDate": "Start Date FR",
+        "startDatePlaceholder": "Please enter the start date FR",
+        "serviceAssistants": "Service Assistants FR",
+        "serviceAssistantsPlaceholder": "Please enter the service assistants FR",
+        "headOfService": "Head of Service FR",
+        "headOfServicePlaceholder": "Please enter the head of service FR",
+        "description": "Description FR",
+        "descriptionPlaceholder": "Please enter the description FR"
+      }
+    }
   }
 }

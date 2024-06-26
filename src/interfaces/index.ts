@@ -37,3 +37,28 @@ export interface IUpsertUserModal {
   onCancel: () => void;
   initialValues?: any;
 }
+
+export interface IStamp {
+  doctorName: string;
+  medicalFacility: string;
+  dateOfVisit: string;
+  medicalLicense: string;
+}
+
+export interface IService {
+  key: string;
+  name: string;
+  description: string;
+  headOfService: string;
+  serviceAssistants: string;
+  subSpecialities: string[];
+  expertises: string[];
+  stamp: IStamp;
+}
+
+export interface IUpsertServiceModal {
+  visible: boolean;
+  onCreate: (values: any) => void;
+  onCancel: () => void;
+  initialValues?: any;
+}
