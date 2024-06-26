@@ -42,5 +42,29 @@
     "publications": "Publications",
     "upcomingAppointments": "Upcoming Appointments",
     "facility": "Medical Facility"
+  },
+  "diagnosis": {
+    "title": "Diagnosis",
+    "download": "Download",
+    "create": "Create",
+    "service": "Service",
+    "table": {
+      "wording": "Wording",
+      "service": "Service",
+      "actions": "Actions"
+    },
+    "modal": {
+      "title": "Create a New Diagnosis",
+      "okText": "Save",
+      "cancelText": "Cancel",
+      "form": {
+        "wording": "Wording",
+        "wordingPlaceholder": "Please input the wording!",
+        "service": "Service",
+        "servicePlaceholder": "Please select a service!",
+        "description": "Description",
+        "descriptionPlaceholder": "Please input the description!"
+      }
+    }
   }
 }

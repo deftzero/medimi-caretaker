@@ -5,6 +5,7 @@ import Dashboard from "../pages/caretaker/dashboard/Dashboard";
 import AppLayout from "../layout/Layout";
 import Users from "../pages/caretaker/users/Users";
 import User from "../pages/caretaker/users/User";
+import Diagnostics from "../pages/caretaker/diagnostics/Diagnostics";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ export const router = createBrowserRouter([
         index: true,
         path: "/dashboard",
         element: <Dashboard />
+      },
+      {
+        index: true,
+        path: "/diagnostics",
+        element: <Diagnostics />
       },
       {
         index: true,

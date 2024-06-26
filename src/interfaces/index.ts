@@ -19,3 +19,9 @@ export interface IPublicationsDashoard {
   title: string;
   facility: string;
 }
+
+export interface IDiagnosis {
+  id: number;
+  wording: string;
+  service: string;
+}
