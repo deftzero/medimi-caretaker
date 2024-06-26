@@ -21,7 +21,7 @@ export interface IPublicationsDashoard {
 }
 
 export interface IDiagnosis {
-  id: number;
+  id: string;
   wording: string;
   service: string;
 }
