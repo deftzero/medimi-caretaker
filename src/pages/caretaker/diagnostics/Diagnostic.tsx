@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import ChevronLeft from "../../../assets/icons/chevron-left.svg?react";
 import Pencil from "../../../assets/icons/pencil.svg?react";
-import { Typography, Space, Col, Row } from "antd";
+import { Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import { diagnosisData } from "../../../data";
 import { IDiagnosis } from "../../../interfaces";
