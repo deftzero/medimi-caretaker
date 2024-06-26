@@ -75,7 +75,7 @@ function DiagnosisTable({ data }: { data: IDiagnosis[] }) {
       key: 'wording',
       render: (data,obj) => {
       return <Link
-        className="text-slate-800 hover:text-secondary" to={`/users/${obj?.id}`}>
+        className="text-slate-800 hover:text-secondary" to={`/diagnostics/${obj?.id}`}>
         {data}
       </Link>}
     },

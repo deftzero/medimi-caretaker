@@ -6,6 +6,7 @@ import AppLayout from "../layout/Layout";
 import Users from "../pages/caretaker/users/Users";
 import User from "../pages/caretaker/users/User";
 import Diagnostics from "../pages/caretaker/diagnostics/Diagnostics";
+import Diagnostic from "../pages/caretaker/diagnostics/Diagnostic";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
         index: true,
         path: "/diagnostics",
         element: <Diagnostics />
+      },
+      {
+        path: "/diagnostics/:id",
+        element: <Diagnostic />
       },
       {
         index: true,

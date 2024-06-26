@@ -66,5 +66,14 @@
         "descriptionPlaceholder": "Please input the description!"
       }
     }
+  },
+  "singleDiagnosis": {
+    "title": "Diagnostics {{name}}",
+    "details": {
+      "wording": "Wording",
+      "service": "Service",
+      "description": "Description"
+    },
+    "edit": "Edit"
   }
 }
