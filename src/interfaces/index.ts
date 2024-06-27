@@ -78,3 +78,8 @@ export interface IUpsertMotiveModal {
   onCancel: () => void;
   initialValues?: IMotive;
 }
+
+export interface IEvolutionModal {
+  visible: boolean;
+  onClose: () => void;
+}

@@ -172,5 +172,32 @@
         "descriptionPlaceholder": "Please enter the description"
       }
     }
+  },
+  "statistics": {
+    "title": "Statistics Indicators",
+    "all": "All",
+    "dermatology": "Dermatology",
+    "gynecology": "Gynecology",
+    "psychiatry": "Psychiatry",
+    "patientFlow": "Patient Flow",
+    "flu": "Flu",
+    "malaria": "Malaria",
+    "others": "Others",
+    "evolutionOfPatientFlow": "Evolution of patient flow",
+    "distributionOfDiseases": "Distribution of diagnosed diseases",
+    "minimum": "Minimum",
+    "average": "Average",
+    "maximum": "Maximum",
+    "evolutionButton": "Evolution of the figure by disease",
+    "dropdown":{
+      "title":"week"
+    },
+    "evolutionModal": {
+    "title": "Evolution",
+    "disease": "Disease",
+    "casesDiagnosed": "Cases Diagnosed",
+    "close": "Close"
+    }
   }
+
 }

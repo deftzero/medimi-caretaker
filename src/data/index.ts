@@ -122,6 +122,41 @@ export const appointmentsStatsOptions: any = {
   },
 };
 
+export const evolutionOfPatientFlowOptions: any = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    xAxes: [{ categorySpacing: 0 }],
+    x: {
+      grid: {
+        display: false,
+      },
+      border: {
+        display: false, // Removes the x-axis line
+      },
+    },
+    y: {
+      beginAtZero: true,
+      grid: {
+        color: "#E5E7EB", // Tailwind gray-300
+        borderDash: [5, 5],
+      },
+      border: {
+        display: false, // Removes the x-axis line
+      },
+    },
+  },
+  plugins: {
+    legend: {
+      display: false
+    },
+    tooltip: {
+      mode: "index",
+      intersect: true,
+    },
+  },
+};
+
 export const appointmentsDashboard:IAppointmentsDashboard[] = [
   {
     doctor: "Dr. Darlene Robertson",

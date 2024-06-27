@@ -153,5 +153,23 @@
         "descriptionPlaceholder": "Please enter the description FR"
       }
     }
+  },
+  "statistics": {
+    "title": "Statistics Indicators FR",
+    "all": "All FR",
+    "dermatology": "Dermatology FR",
+    "gynecology": "Gynecology FR",
+    "psychiatry": "Psychiatry FR",
+    "patientFlow": "Patient Flow FR",
+    "flu": "Flu FR",
+    "malaria": "Malaria FR",
+    "others": "Others FR",
+    "evolutionOfPatientFlow": "Evolution of patient flow FR",
+    "distributionOfDiseases": "Distribution of diagnosed diseases FR",
+    "minimum": "Minimum FR",
+    "average": "Average FR",
+    "maximum": "Maximum FR",
+    "evolutionButton": "Evolution of the figure by disease FR"
   }
+
 }
