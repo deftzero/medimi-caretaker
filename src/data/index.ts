@@ -1,6 +1,7 @@
 import { TFunction } from "i18next";
 import { IAppointmentsDashboard, IDiagnosis, IMotive, IPublicationsDashoard, IUser } from "../interfaces"
 import { MenuProps } from "antd";
+import { ScriptableContext } from "chart.js";
 
 
 
@@ -155,6 +156,57 @@ export const evolutionOfPatientFlowOptions: any = {
       intersect: true,
     },
   },
+};
+export const evolutionOfPatientFlowData = (t:TFunction<"translation", undefined>)=> ({
+  labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+  datasets: [
+    {
+      label: t("statistics.patientFlow"),
+      data: [5, 6, 2, 4, 6, 1, 8],
+      fill: "start",
+      lineTension: 0.8,
+      backgroundColor: (context: ScriptableContext<"line">) => {
+        const ctx = context.chart.ctx;
+        const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+        gradient.addColorStop(0, "rgb(106,196,174,1)");
+        gradient.addColorStop(1, "rgb(106,196,174,0.1)");
+        return gradient;
+      },
+      borderColor: "rgb(106,196,174)",
+    },
+  ],
+});
+
+export const doughnutData = (t:TFunction<"translation", undefined>)=> ({
+  labels: [
+    t("statistics.flu"),
+    t("statistics.malaria"),
+    t("statistics.others"),
+  ],
+  datasets: [
+    {
+      data: [15, 9, 2],
+      backgroundColor: ["#6366F1", "#34D399", "#FBBF24"],
+      hoverBackgroundColor: ["#4F46E5", "#10B981", "#F59E0B"],
+      borderWidth: 1,
+      cutout: "80%",
+      circumference: 240,
+      rotation: 120,
+    },
+  ],
+});
+
+export const doughnutOptions = {
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltip: {
+      enabled: false,
+    },
+  },
+  maintainAspectRatio: false,
+  cutoutPercentage: 80,
 };
 
 export const appointmentsDashboard:IAppointmentsDashboard[] = [

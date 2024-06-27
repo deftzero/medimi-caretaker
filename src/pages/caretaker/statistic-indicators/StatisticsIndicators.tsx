@@ -11,8 +11,7 @@ import {
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import "chart.js/auto";
-import { ScriptableContext } from "chart.js/auto";
-import { evolutionOfPatientFlowOptions, serviceOptions } from "../../../data";
+import { doughnutData, doughnutOptions, evolutionOfPatientFlowData, evolutionOfPatientFlowOptions, serviceOptions } from "../../../data";
 import ActionButton from "../../../components/ui/ActionButton";
 import { ACTION_COLORS } from "../../../config/constants";
 import Calender from "../../../assets/icons/calendar.svg?react";
@@ -25,58 +24,6 @@ const { TabPane } = Tabs;
 const StatisticsIndicators = () => {
   const { t } = useTranslation();
   const [modalVisible, setModalVisible] = useState(false);
-
-  const lineData = {
-    labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
-    datasets: [
-      {
-        label: t("statistics.patientFlow"),
-        data: [5, 6, 2, 4, 6, 1, 8],
-        fill: "start",
-        lineTension: 0.8,
-        backgroundColor: (context: ScriptableContext<"line">) => {
-          const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-          gradient.addColorStop(0, "rgb(106,196,174,1)");
-          gradient.addColorStop(1, "rgb(106,196,174,0.1)");
-          return gradient;
-        },
-        borderColor: "rgb(106,196,174)",
-      },
-    ],
-  };
-
-  const doughnutData = {
-    labels: [
-      t("statistics.flu"),
-      t("statistics.malaria"),
-      t("statistics.others"),
-    ],
-    datasets: [
-      {
-        data: [15, 9, 2],
-        backgroundColor: ["#6366F1", "#34D399", "#FBBF24"],
-        hoverBackgroundColor: ["#4F46E5", "#10B981", "#F59E0B"],
-        borderWidth: 1,
-        cutout: "80%",
-        circumference: 240,
-        rotation: 120,
-      },
-    ],
-  };
-
-  const doughnutOptions = {
-    plugins: {
-      legend: {
-        display: false,
-      },
-      tooltip: {
-        enabled: false,
-      },
-    },
-    maintainAspectRatio: false,
-    cutoutPercentage: 80,
-  };
 
   return (
     <div className="space-y-5 p-5 rounded-xl bg-white">
@@ -126,7 +73,7 @@ const StatisticsIndicators = () => {
                 <div style={{ height: 350 }}>
                   <Line
                     options={evolutionOfPatientFlowOptions}
-                    data={lineData}
+                    data={evolutionOfPatientFlowData(t)}
                   />
                 </div>
               </div>
@@ -137,7 +84,7 @@ const StatisticsIndicators = () => {
                   {t("statistics.distributionOfDiseases")}
                 </Title>
                 <div style={{ position: "relative", height: "250px" }}>
-                  <Doughnut data={doughnutData} options={doughnutOptions} />
+                  <Doughnut data={doughnutData(t)} options={doughnutOptions} />
                   <div
                     style={{
                       position: "absolute",
