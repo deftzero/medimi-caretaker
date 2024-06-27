@@ -9,6 +9,7 @@ import Diagnostics from "../pages/caretaker/diagnostics/Diagnostics";
 import Diagnostic from "../pages/caretaker/diagnostics/Diagnostic";
 import Services from "../pages/caretaker/services/Services";
 import ServiceDetails from "../pages/caretaker/services/Service";
+import Motives from "../pages/caretaker/motives/Motives";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,11 @@ export const router = createBrowserRouter([
       {
         path: "/services/:id",
         element: <ServiceDetails />
+      },
+      {
+        index: true,
+        path: "/motives",
+        element: <Motives />
       },
     ]
   }

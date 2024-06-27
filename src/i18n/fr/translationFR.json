@@ -120,5 +120,38 @@
         "descriptionPlaceholder": "Please enter the description FR"
       }
     }
+  },
+  "motives": {
+    "title": "Motives FR",
+    "download": "Download FR",
+    "create": "Create FR",
+    "clearFilters": "Clear all FR",
+    "table": {
+      "wording": "Wording FR",
+      "service": "Service FR",
+      "price": "Price FR",
+      "duration": "Duration FR",
+      "actions": "Actions FR"
+    },
+    "modal": {
+      "title": "Create an appointment reason FR",
+      "editTitle": "Edit appointment reason FR",
+      "okText": "Save FR",
+      "cancelText": "Return FR",
+      "form": {
+        "wording": "Wording FR",
+        "wordingPlaceholder": "Please enter the wording FR",
+        "price": "Price FR",
+        "pricePlaceholder": "Please enter the price FR",
+        "duration": "Duration FR",
+        "durationPlaceholder": "Please enter the duration FR",
+        "service": "Service FR",
+        "servicePlaceholder": "Please select a service FR",
+        "appointmentTypes": "Types of appointments FR",
+        "appointmentTypesPlaceholder": "Please select appointment types FR",
+        "description": "Description FR",
+        "descriptionPlaceholder": "Please enter the description FR"
+      }
+    }
   }
 }

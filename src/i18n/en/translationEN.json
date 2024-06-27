@@ -139,5 +139,38 @@
       "dateOfVisit": "Date of visit",
       "medicalLicense": "Medical license number"
     }
+  },
+  "motives": {
+    "title": "Motives",
+    "download": "Download",
+    "create": "Create",
+    "clearFilters": "Clear all",
+    "table": {
+      "wording": "Wording",
+      "service": "Service",
+      "price": "Price",
+      "duration": "Duration",
+      "actions": "Actions"
+    },
+    "modal": {
+      "title": "Create an appointment reason",
+      "editTitle": "Edit appointment reason",
+      "okText": "Save",
+      "cancelText": "Return",
+      "form": {
+        "wording": "Wording",
+        "wordingPlaceholder": "Please enter the wording",
+        "price": "Price",
+        "pricePlaceholder": "Please enter the price",
+        "duration": "Duration",
+        "durationPlaceholder": "Please enter the duration",
+        "service": "Service",
+        "servicePlaceholder": "Please select a service",
+        "appointmentTypes": "Types of appointments",
+        "appointmentTypesPlaceholder": "Please select appointment types",
+        "description": "Description",
+        "descriptionPlaceholder": "Please enter the description"
+      }
+    }
   }
 }
