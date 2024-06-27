@@ -1,5 +1,5 @@
 import { TFunction } from "i18next";
-import { IAppointmentsDashboard, IDiagnosis, IPublicationsDashoard, IUser } from "../interfaces"
+import { IAppointmentsDashboard, IDiagnosis, IMotive, IPublicationsDashoard, IUser } from "../interfaces"
 import { MenuProps } from "antd";
 
 
@@ -232,5 +232,61 @@ export const servicesData:any = [
       dateOfVisit: "April 10, 2024",
       medicalLicense: "MD987654321"
     }
+  }
+];
+
+export const motivesStatusOptions = [
+  { id: 1, name: "Active" },
+  { id: 2, name: "Inactive" }
+];
+
+export const motivesData: IMotive[] = [
+  {
+    key: '1',
+    wording: "Consultation",
+    service: "Cardiology",
+    price: "20,000",
+    duration: 35,
+    status: "Active"
+  },
+  {
+    key: '2',
+    wording: "Taking pulse",
+    service: "General medicine",
+    price: "15,000",
+    duration: 25,
+    status: "Active"
+  },
+  {
+    key: '3',
+    wording: "Annual Check up",
+    service: "Cardiology",
+    price: "25,000",
+    duration: 20,
+    status: "Active"
+  },
+  {
+    key: '4',
+    wording: "Test",
+    service: "Cardiology",
+    price: "40,000",
+    duration: 30,
+    status: "Active"
+  },
+  {
+    key: '5',
+    wording: "Abdominal pain",
+    service: "General medicine",
+    price: "90,000",
+    duration: 30,
+    status: "Active"
+  },
+  {
+    key: '6',
+    wording: "Sore throat",
+    service: "General medicine",
+    price: "5,000",
+    duration: 30,
+    status: "Active"
   }
 ];

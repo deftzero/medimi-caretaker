@@ -12,7 +12,7 @@ import "chart.js/auto";
 import { useTranslation } from "react-i18next";
 import { DownOutlined } from "@ant-design/icons";
 import VideoCamera from "../../../assets/icons/video-camera.svg?react";
-import Calender from "../../../assets/icons/calendar.svg?react";
+import Clock from "../../../assets/icons/clock.svg?react";
 import AppButton from "../../../components/ui/AppButton";
 import { ACTION_COLORS } from "../../../config/constants";
 import { appointmentsDashboard, appointmentsStatsData, appointmentsStatsDropdownItems, appointmentsStatsOptions, publicationsDashoard } from "../../../data";
@@ -119,7 +119,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="mt-4 flex flex-row justify-center p-2 items-center gap-2 hover:cursor-pointer rounded-md bg-slate-100">
-                  <Calender />
+                  <Clock />
                   <Text className="!mt-1">{item?.time}</Text>
                 </div>
               </Card>

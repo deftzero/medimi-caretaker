@@ -1,13 +1,14 @@
 import { Link, useParams } from "react-router-dom";
 import ChevronLeft from "../../../assets/icons/chevron-left.svg?react";
 import Pencil from "../../../assets/icons/white-pencil.svg?react";
-import { Col, Row, Typography } from "antd";
+import { Col, Image, Row, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import { servicesData } from "../../../data";
 import { IService } from "../../../interfaces";
 import AppButton from "../../../components/ui/AppButton";
 import { useState } from "react";
 import UpsertServiceModal from "./UpsertService";
+import ServiceStamp from '../../../assets/service-stamp.png'
 
 const { Title, Text } = Typography;
 
@@ -178,6 +179,9 @@ function Details({ data, onEdit }: { data: IService; onEdit: () => void }) {
           </div>
         </Col>
       </Row>
+      <div className="my-4 flex justify-center">
+          <Image src={ServiceStamp} width={100}  height={100} alt="Service Stamp" />
+      </div>
     </div>
   );
 }

@@ -62,3 +62,19 @@ export interface IUpsertServiceModal {
   onCancel: () => void;
   initialValues?: any;
 }
+
+export interface IMotive {
+  key: string;
+  wording: string;
+  service: string;
+  price: string;
+  duration: number;
+  status: string;
+}
+
+export interface IUpsertMotiveModal {
+  visible: boolean;
+  onCreate: (values: any) => void;
+  onCancel: () => void;
+  initialValues?: IMotive;
+}
