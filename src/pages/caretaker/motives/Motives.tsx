@@ -5,6 +5,7 @@ import Eye from "../../../assets/icons/eye.svg?react";
 import Pencil from "../../../assets/icons/pencil.svg?react";
 import Reload from "../../../assets/icons/reload.svg?react";
 import Plus from "../../../assets/icons/plus.svg?react";
+import Clear from "../../../assets/icons/close.svg?react";
 import Download from "../../../assets/icons/download.svg?react";
 import {
   serviceOptions,
@@ -97,7 +98,7 @@ export default function Motives() {
             </Select.Option>
           ))}
         </Select>
-        <AppButton icon={<Plus />} type="link" className="!text-slate-500" onClick={handleClearFilters}>
+        <AppButton icon={<Clear />} type="link" className="!text-slate-500" onClick={handleClearFilters}>
           {t("motives.clearFilters")}
         </AppButton>
       </Space>

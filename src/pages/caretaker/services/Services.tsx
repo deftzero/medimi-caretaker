@@ -3,7 +3,7 @@ import AppButton from "../../../components/ui/AppButton";
 import Search from "../../../assets/icons/search.svg?react";
 import Eye from "../../../assets/icons/eye.svg?react";
 import Pencil from "../../../assets/icons/pencil.svg?react";
-import Trash from "../../../assets/icons/reload.svg?react";
+import Trash from "../../../assets/icons/trash.svg?react";
 import Plus from "../../../assets/icons/plus.svg?react";
 import Download from "../../../assets/icons/download.svg?react";
 import { servicesData, servicesDropdownOptions } from "../../../data";
