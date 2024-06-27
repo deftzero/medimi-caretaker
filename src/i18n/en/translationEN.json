@@ -93,5 +93,51 @@
       "description": "Description"
     },
     "edit": "Edit"
+  },
+  "services": {
+    "title": "Services",
+    "download": "Download",
+    "create": "Create",
+    "service": "Service",
+    "table": {
+      "name": "Name",
+      "headOfService": "Head of Service",
+      "actions": "Actions"
+    },
+    "modal": {
+      "title": "Create a service",
+      "editTitle": "Edit a service",
+      "okText": "Save",
+      "cancelText": "Cancel",
+      "form": {
+        "startDate": "Start Date",
+        "startDatePlaceholder": "Please enter the start date",
+        "serviceAssistants": "Service Assistants",
+        "serviceAssistantsPlaceholder": "Please enter the service assistants",
+        "headOfService": "Head of Service",
+        "headOfServicePlaceholder": "Please enter the head of service",
+        "description": "Description",
+        "descriptionPlaceholder": "Please enter the description"
+      }
+    }
+  },
+  "serviceDetails": {
+    "title": "{{name}} Service",
+    "edit": "Edit",
+    "details": {
+      "wording": "Wording",
+      "description": "Description",
+      "headOfService": "Head of Service",
+      "serviceAssistants": "Service Assistants"
+    },
+    "subSpecialities": "Sub-specialities",
+    "expertises": "Expertises",
+    "stamp": {
+      "title": "Stamp",
+      "doctorsName": "Doctor's name",
+      "medicalFacility": "Medical facility details",
+      "dateOfVisit": "Date of visit",
+      "medicalLicense": "Medical license number"
+    }
   }
 }
