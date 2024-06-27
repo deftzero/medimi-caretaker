@@ -106,7 +106,7 @@ const StatisticsIndicators = () => {
                   <span className="mt-2">
                     <Calender />
                   </span>
-                  <span>{t("statistics.dropdown.title")}</span>
+                  <span className="text-slate-600">{t("statistics.dropdown.title")}</span>
                 </div>
               }
             >
