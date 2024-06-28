@@ -10,6 +10,7 @@ import Diagnostic from "../pages/caretaker/diagnostics/Diagnostic";
 import Services from "../pages/caretaker/services/Services";
 import ServiceDetails from "../pages/caretaker/services/Service";
 import Motives from "../pages/caretaker/motives/Motives";
+import StatisticsIndicators from "../pages/caretaker/statistic-indicators/StatisticsIndicators";
 
 export const router = createBrowserRouter([
   {
@@ -60,6 +61,11 @@ export const router = createBrowserRouter([
         index: true,
         path: "/motives",
         element: <Motives />
+      },
+      {
+        index: true,
+        path: "/statistics-indicators",
+        element: <StatisticsIndicators />
       },
     ]
   }
