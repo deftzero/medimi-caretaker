@@ -11,6 +11,7 @@ import Services from "../pages/caretaker/services/Services";
 import ServiceDetails from "../pages/caretaker/services/Service";
 import Motives from "../pages/caretaker/motives/Motives";
 import StatisticsIndicators from "../pages/caretaker/statistic-indicators/StatisticsIndicators";
+import LiteAccounting from "../pages/caretaker/lite-accounting/LiteAccounting";
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,11 @@ export const router = createBrowserRouter([
         index: true,
         path: "/statistics-indicators",
         element: <StatisticsIndicators />
+      },
+      {
+        index: true,
+        path: "/lite-accounting",
+        element: <LiteAccounting />
       },
     ]
   }

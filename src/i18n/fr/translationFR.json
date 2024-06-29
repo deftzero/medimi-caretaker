@@ -170,6 +170,26 @@
     "average": "Average FR",
     "maximum": "Maximum FR",
     "evolutionButton": "Evolution of the figure by disease FR"
+  },
+"liteAccounting": {
+    "dermatology":{
+      "title": "Lite Accounting FR",
+      "all": "All FR",
+      "dermatology": "Dermatology FR",
+      "gynecology": "Gynecology FR",
+      "psychiatry": "Psychiatry FR",
+      "totalBalance": "Total Balance FR",
+      "configure": "Configure FR",
+      "assets": "Assets FR",
+      "liabilities": "Liabilities FR",
+      "ownConsultations": "Own Consultations FR",
+      "punctualIncome": "Punctual Income FR",
+      "totalFixedIncome": "Total fixed income FR",
+      "wages": "Wages FR",
+      "totalAssets": "+Total Assets FR",
+      "rentingFees": "Renting Fees FR",
+      "transportWeekly": "Transport-Weekly FR",
+      "totalLiabilities": "-Total liabilities FR"
+    }
   }
-
 }

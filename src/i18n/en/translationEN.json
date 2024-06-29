@@ -198,6 +198,45 @@
     "casesDiagnosed": "Cases Diagnosed",
     "close": "Close"
     }
+  },
+  "liteAccounting": {
+    "dermatology":{
+      "title": "Lite Accounting",
+      "all": "All",
+      "dermatology": "Dermatology",
+      "gynecology": "Gynecology",
+      "psychiatry": "Psychiatry",
+      "totalBalance": "Total Balance",
+      "configure": "Configure",
+      "assets": "Assets",
+      "liabilities": "Liabilities",
+      "ownConsultations": "Own Consultations",
+      "punctualIncome": "Punctual Income",
+      "totalFixedIncome": "Total fixed income",
+      "wages": "Wages",
+      "totalAssets": "+Total Assets",
+      "rentingFees": "Renting Fees",
+      "transportWeekly": "Transport-Weekly",
+      "totalLiabilities": "-Total liabilities",
+      "configureForm": {
+        "assets": {
+          "title": "Assets (inflows)",
+          "ownConsultations": "Own Consultations"
+        },
+        "liabilities": {
+          "title": "Liabilities (charges)",
+          "transportWeekly": "Transport-Weekly",
+          "totalFixedIncome": "Total fixed Expenses"
+        },
+        "buttons": {
+          "recursive": "Recursive",
+          "punctual": "Punctual"
+        },
+        "actions": {
+          "cancel": "Cancel",
+          "save": "Save"
+        }
+      }
+    }
   }
-
 }
