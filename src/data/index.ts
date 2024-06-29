@@ -377,3 +377,119 @@ export const motivesData: IMotive[] = [
     status: "Active"
   }
 ];
+
+export const contactsData = [
+  {
+    name: "Darrell Steward",
+    message: "You need to do a lab check",
+    avatar: "",
+    status: "Patients",
+    unread: 2,
+    opened: true,
+  },
+  {
+    name: "Ralph Edwards",
+    message: "I hope you get well soon",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Leslie Alexander",
+    message: "I have prescribed for you...",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Jerome Bell",
+    message: "Thank You for your advice.",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Dianne Russell",
+    message: "You need to do a lab check",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Darlene Robertson",
+    message: "Okay, see you again Human",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Bessie Cooper",
+    message: "You need to do a lab check",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Courtney Henry",
+    message: "I have prescribed for you...",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Marvin McKinney",
+    message: "Okay, see you again Human",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Ronald Richards",
+    message: "Thank You for your advice.",
+    avatar: "",
+    status: "Patients",
+    unread: 1,
+  },
+  {
+    name: "Cameron Williamson",
+    message: "I have prescribed for you...",
+    avatar: "",
+    status: "Patients",
+  },
+  {
+    name: "Esther Howard",
+    message: "You need to do a lab check",
+    avatar: "",
+    status: "Patients",
+  },
+];
+
+export const messagesData = [
+  {
+    sender: "Jay Hargudson",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    avatar: "",
+    time: "1 day ago",
+    file: {
+      fileSize: "12kb",
+      fileName: "Hello.pdf",
+    },
+  },
+  {
+    images: [
+      "https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg",
+      "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+      "https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg",
+      "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+    ],
+    sender: "Me",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    avatar: "",
+    time: "1 day ago",
+  },
+  {
+    sender: "Jay Hargudson",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    avatar: "",
+    time: "1 day ago",
+  },
+  {
+    sender: "Me",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    avatar: "",
+    time: "1 day ago",
+  },
+];

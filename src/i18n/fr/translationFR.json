@@ -171,7 +171,7 @@
     "maximum": "Maximum FR",
     "evolutionButton": "Evolution of the figure by disease FR"
   },
-"liteAccounting": {
+  "liteAccounting": {
     "dermatology":{
       "title": "Lite Accounting FR",
       "all": "All FR",
@@ -189,7 +189,71 @@
       "totalAssets": "+Total Assets FR",
       "rentingFees": "Renting Fees FR",
       "transportWeekly": "Transport-Weekly FR",
-      "totalLiabilities": "-Total liabilities FR"
+      "totalLiabilities": "-Total liabilities FR",
+      "configureForm": {
+        "assets": {
+          "title": "Assets (inflows) FR",
+          "ownConsultations": "Own Consultations FR"
+        },
+        "liabilities": {
+          "title": "Liabilities (charges) FR",
+          "transportWeekly": "Transport-Weekly FR",
+          "totalFixedIncome": "Total fixed Expenses FR"
+        },
+        "buttons": {
+          "recursive": "Recursive FR",
+          "punctual": "Punctual FR"
+        },
+        "actions": {
+          "cancel": "Cancel FR",
+          "save": "Save FR"
+        }
+      }
+    }
+  },
+  "messages": {
+    "searchPlaceholder": "Search...",
+    "patients": "Patients",
+    "medicalWorld": "Medical world",
+    "onlineStatus": "Online 3 minutes ago",
+    "typeMessage": "Type your message...",
+    "online": "Online",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "location": "Location",
+    "birthday": "Birthday",
+    "joinDate": "Join Date",
+    "images": "Images",
+    "allowConversation": "Allow conversation"
+  },
+  "informationQueue": {
+    "title": "Information Queue FR",
+    "tabs": {
+      "all": "All FR",
+      "global": "Global FR",
+      "facility": "Facility FR",
+      "gynecology": "Gynecology FR",
+      "generalMedicine": "General Medicine FR"
+    },
+    "placeholder": "What's happening? FR",
+    "photoVideo": "Photo/Video FR",
+    "feeling": "Feeling FR",
+    "publish": "Publish FR",
+    "createPostModal": {
+      "title": "Create a post FR",
+      "cancel": "Cancel FR",
+      "publish": "Publish FR",
+      "timeline": "Timeline FR",
+      "timelineRequired": "Please select a timeline FR",
+      "description": "Description FR",
+      "descriptionRequired": "Please enter a description FR",
+      "descriptionPlaceholder": "Write your post here... FR",
+      "tags": "Add or change tags (up to 5) so readers know what your story is about FR",
+      "tagsPlaceholder": "Add here FR",
+      "photoVideo": "Photo/Video FR",
+      "feeling": "Feeling FR",
+      "createPost": "Create Post FR",
+      "selectPlaceholder": "Select FR"
     }
   }
 }
