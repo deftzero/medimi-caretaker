@@ -9,44 +9,7 @@ import { useTranslation } from "react-i18next";
 import Search from "../../../../assets/icons/search.svg?react";
 import Download from "../../../../assets/icons/download.svg?react";
 import MoneyBag from "../../../../assets/icons/money-bag.svg?react";
-
-const messages = [
-  {
-    sender: "Jay Hargudson",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    avatar: "",
-    time: "1 day ago",
-    file: {
-      fileSize: "12kb",
-      fileName: "Hello.pdf",
-    },
-  },
-  {
-    images: [
-      "https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg",
-      "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
-      "https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg",
-      "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
-    ],
-    sender: "Me",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    avatar: "",
-    time: "1 day ago",
-  },
-  {
-    sender: "Jay Hargudson",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    avatar: "",
-    time: "1 day ago",
-  },
-  {
-    sender: "Me",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    avatar: "",
-    time: "1 day ago",
-  },
-];
+import { messagesData } from "../../../../data";
 
 const { Text } = Typography;
 
@@ -82,7 +45,7 @@ const ChatWindow = ({ setShowProfile }: any) => {
       </div>
       <div className="flex-1 p-4 overflow-y-auto flex flex-col-reverse">
         <div className="flex flex-col">
-          {messages.map((msg, index) => (
+          {messagesData.map((msg, index) => (
             <div
               key={index}
               className={`flex items-end ${

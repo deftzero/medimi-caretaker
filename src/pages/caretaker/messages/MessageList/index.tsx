@@ -2,84 +2,8 @@ import { List, Avatar, Input, Badge, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import Search from "../../../../assets/icons/search.svg?react";
 import { useState } from "react";
+import { contactsData } from "../../../../data";
 
-const contacts = [
-  {
-    name: "Darrell Steward",
-    message: "You need to do a lab check",
-    avatar: "",
-    status: "Patients",
-    unread: 2,
-    opened: true,
-  },
-  {
-    name: "Ralph Edwards",
-    message: "I hope you get well soon",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Leslie Alexander",
-    message: "I have prescribed for you...",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Jerome Bell",
-    message: "Thank You for your advice.",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Dianne Russell",
-    message: "You need to do a lab check",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Darlene Robertson",
-    message: "Okay, see you again Human",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Bessie Cooper",
-    message: "You need to do a lab check",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Courtney Henry",
-    message: "I have prescribed for you...",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Marvin McKinney",
-    message: "Okay, see you again Human",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Ronald Richards",
-    message: "Thank You for your advice.",
-    avatar: "",
-    status: "Patients",
-    unread: 1,
-  },
-  {
-    name: "Cameron Williamson",
-    message: "I have prescribed for you...",
-    avatar: "",
-    status: "Patients",
-  },
-  {
-    name: "Esther Howard",
-    message: "You need to do a lab check",
-    avatar: "",
-    status: "Patients",
-  },
-];
 const { Paragraph } = Typography;
 const MessageList = () => {
   const { t } = useTranslation();
@@ -116,7 +40,7 @@ const MessageList = () => {
         <List
           itemLayout="horizontal"
           className="overflow-y-auto h-[80%]"
-          dataSource={contacts}
+          dataSource={contactsData}
           renderItem={(item) => (
             <List.Item
               className={`!border-0 !px-3 rounded-md ${
