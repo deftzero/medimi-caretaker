@@ -238,5 +238,21 @@
         }
       }
     }
+  },
+  "messages": {
+    "title":"Messages",
+    "searchPlaceholder": "Search...",
+    "patients": "Patients",
+    "medicalWorld": "Medical world",
+    "onlineStatus": "Online 3 minutes ago",
+    "typeMessage": "Type your message...",
+    "online": "Online",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "location": "Location",
+    "birthday": "Birthday",
+    "joinDate": "Join Date",
+    "images": "Images",
+    "allowConversation": "Allow conversation"
   }
 }

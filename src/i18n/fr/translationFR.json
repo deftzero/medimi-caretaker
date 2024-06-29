@@ -171,7 +171,7 @@
     "maximum": "Maximum FR",
     "evolutionButton": "Evolution of the figure by disease FR"
   },
-"liteAccounting": {
+  "liteAccounting": {
     "dermatology":{
       "title": "Lite Accounting FR",
       "all": "All FR",
@@ -189,7 +189,41 @@
       "totalAssets": "+Total Assets FR",
       "rentingFees": "Renting Fees FR",
       "transportWeekly": "Transport-Weekly FR",
-      "totalLiabilities": "-Total liabilities FR"
+      "totalLiabilities": "-Total liabilities FR",
+      "configureForm": {
+        "assets": {
+          "title": "Assets (inflows) FR",
+          "ownConsultations": "Own Consultations FR"
+        },
+        "liabilities": {
+          "title": "Liabilities (charges) FR",
+          "transportWeekly": "Transport-Weekly FR",
+          "totalFixedIncome": "Total fixed Expenses FR"
+        },
+        "buttons": {
+          "recursive": "Recursive FR",
+          "punctual": "Punctual FR"
+        },
+        "actions": {
+          "cancel": "Cancel FR",
+          "save": "Save FR"
+        }
+      }
     }
+  },
+  "messages": {
+    "searchPlaceholder": "Search...",
+    "patients": "Patients",
+    "medicalWorld": "Medical world",
+    "onlineStatus": "Online 3 minutes ago",
+    "typeMessage": "Type your message...",
+    "online": "Online",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "location": "Location",
+    "birthday": "Birthday",
+    "joinDate": "Join Date",
+    "images": "Images",
+    "allowConversation": "Allow conversation"
   }
 }
