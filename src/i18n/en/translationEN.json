@@ -254,5 +254,35 @@
     "joinDate": "Join Date",
     "images": "Images",
     "allowConversation": "Allow conversation"
+  },
+  "informationQueue": {
+    "title": "Information Queue",
+    "tabs": {
+      "all": "All",
+      "global": "Global",
+      "facility": "Facility",
+      "gynecology": "Gynecology",
+      "generalMedicine": "General Medicine"
+    },
+    "placeholder": "What's happening?",
+    "photoVideo": "Photo/Video",
+    "feeling": "Feeling",
+    "publish": "Publish",
+    "createPostModal": {
+      "title": "Create a post",
+      "cancel": "Cancel",
+      "publish": "Publish",
+      "timeline": "Timeline",
+      "timelineRequired": "Please select a timeline",
+      "description": "Description",
+      "descriptionRequired": "Please enter a description",
+      "descriptionPlaceholder": "Write your post here...",
+      "tags": "Add or change tags (up to 5) so readers know what your story is about",
+      "tagsPlaceholder": "Add here",
+      "photoVideo": "Photo/Video",
+      "feeling": "Feeling",
+      "createPost": "Create Post",
+      "selectPlaceholder": "Select"
+    }
   }
 }

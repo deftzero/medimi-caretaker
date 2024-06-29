@@ -13,6 +13,7 @@ import Motives from "../pages/caretaker/motives/Motives";
 import StatisticsIndicators from "../pages/caretaker/statistic-indicators/StatisticsIndicators";
 import LiteAccounting from "../pages/caretaker/lite-accounting/LiteAccounting";
 import Messages from "../pages/caretaker/messages/messages";
+import InformationQueue from "../pages/caretaker/information-queue/InformationQueue";
 
 export const router = createBrowserRouter([
   {
@@ -78,6 +79,11 @@ export const router = createBrowserRouter([
         index: true,
         path: "/messages",
         element: <Messages />
+      },
+      {
+        index: true,
+        path: "/Information-queue",
+        element: <InformationQueue />
       },
     ]
   }

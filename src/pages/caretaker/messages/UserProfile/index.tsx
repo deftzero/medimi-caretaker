@@ -1,4 +1,4 @@
-import { Avatar, Typography, Switch, Image, Button, Tag } from 'antd';
+import { Avatar, Typography, Switch, Image, Button, Tag, Divider } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 
@@ -35,7 +35,8 @@ const UserProfile = ({setShowProfile}:any) => {
       <div className="p-4 text-center">
         <Title level={4}>Jack Tomphson</Title>
         <Tag bordered={false} color="success">{t('messages.online')}</Tag>
-        <div className="mt-4 text-left space-y-2">
+        <Divider className="my-2" />
+        <div className="mt-2 text-left space-y-2">
           <div>
             <Text strong className='text-[#667085]'>Email</Text><br />
             <Text strong>jacktomphson@mail.com</Text>
