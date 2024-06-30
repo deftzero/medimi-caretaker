@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import ChevronLeft from "../../../assets/icons/chevron-left.svg?react";
-import Pencil from "../../../assets/icons/pencil.svg?react";
+import ArrowLeft from "../../../assets/icons/arrow-left.svg?react";
+import Pencil from "../../../assets/icons/white-pencil.svg?react";
 import { Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import { diagnosisData } from "../../../data";
@@ -20,7 +20,7 @@ export default function Diagnostic() {
     <div className="space-y-5">
       <div className="flex flex-row items-center gap-5">
         <Link to={"/diagnostics"}>
-          <ChevronLeft />
+          <ArrowLeft />
         </Link>
         <Title level={3} className="mt-2">
           {t("singleDiagnosis.title", { name: data?.wording })}

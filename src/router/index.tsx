@@ -1,5 +1,5 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
-import LoginPage from "../pages/Login";
+import LoginPage from "../pages/auth/Login";
 // import AppLayout from "../layout/Layout";
 import Dashboard from "../pages/caretaker/dashboard/Dashboard";
 import AppLayout from "../layout/Layout";
@@ -14,12 +14,27 @@ import StatisticsIndicators from "../pages/caretaker/statistic-indicators/Statis
 import LiteAccounting from "../pages/caretaker/lite-accounting/LiteAccounting";
 import Messages from "../pages/caretaker/messages/messages";
 import InformationQueue from "../pages/caretaker/information-queue/InformationQueue";
+import ResetPassword from "../pages/auth/ResetPassword";
+import VerifiyCode from "../pages/auth/VerifyCode";
+import NewPassword from "../pages/auth/NewPassword";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
     index: true,
     element: <LoginPage />
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />
+  },
+  {
+    path: "/verify-code",
+    element: <VerifiyCode />
+  },
+  {
+    path: "/new-password",
+    element: <NewPassword />
   },
   {
     path: "/",
