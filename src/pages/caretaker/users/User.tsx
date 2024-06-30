@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import ChevronLeft from '../../../assets/icons/chevron-left.svg?react'
+import ArrowLeft from '../../../assets/icons/arrow-left.svg?react'
 import { IUser } from "../../../interfaces";
 import { usersData } from "../../../data";
 import { Typography } from "antd";
@@ -18,7 +18,7 @@ export default function User() {
     <div className='space-y-5'>
       <div className='flex flex-row items-center gap-5'>
         <Link to={'/users'}>
-          <ChevronLeft />
+          <ArrowLeft />
         </Link>
         <Title level={3} className='mt-2'>
           {t('user.title')}
