@@ -47,3 +47,7 @@
   background-color: #51b199 !important;
   border-color: #51b199 !important;
 }
+
+body {
+  margin: 0;
+}

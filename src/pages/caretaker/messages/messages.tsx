@@ -9,7 +9,7 @@ const Messages = () => {
   const { t } = useTranslation();
   const [showProfile, setShowProfile] = useState(false);
   return (
-    <div className="h-full">
+    <div className="">
       <div className="header flex flex-row justify-between items-center">
         <Title level={3} className="mt-3">
           {t("messages.title")}

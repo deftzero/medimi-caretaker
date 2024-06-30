@@ -25,7 +25,7 @@ const siderStyle: any = {
   left: 0,
   top: 0,
   bottom: 0,
-  zIndex: 20
+  // zIndex: 20
 };
 
 export interface ISidebarLink {
@@ -35,7 +35,7 @@ export interface ISidebarLink {
   icon?: any;
 }
 
-export function Sidebar() {
+export function Sidebar({ collapsed }: { collapsed: any }) {
   const { t } = useTranslation();
 
   const sidebarItems: ISidebarLink[] = [
@@ -106,16 +106,16 @@ export function Sidebar() {
       href: "/information-queue"
     },
   ]
-  
+
   return (
-    <Sider style={siderStyle} width={225}>
+    <Sider style={siderStyle} collapsed={collapsed}>
       <div className='flex justify-center w-full mt-5'>
         <img src={Logo} className='h-16' />
       </div>
       <ul className="list-none space-y-2 px-3 mt-8">
         {sidebarItems.map((link: any) =>
           <li key={link.title}>
-            <SidebarLink link={link} />
+            <SidebarLink collapsed={collapsed} link={link} />
           </li>
         )}
       </ul>
@@ -124,8 +124,10 @@ export function Sidebar() {
 }
 
 const SidebarLink = ({
+  collapsed,
   link,
 }: {
+  collapsed: boolean,
   link: ISidebarLink;
 }) => {
 
@@ -137,12 +139,14 @@ const SidebarLink = ({
   return (
     <Link
       to={link.href}
-      className={`group transition-colors py-2.5 pl-5 inline-block hover:bg-popover text-xs hover:shadow rounded-md w-full${location.pathname.includes(link.href) ? " font-semibold bg-slate-100 text-primary hover:bg-slate-100 hover:text-primary" : " text-slate-100 hover:text-slate-100"
+      className={`group transition-colors py-2.5 pl-4 inline-block hover:bg-popover text-xs hover:shadow rounded-md w-full${location.pathname.includes(link.href) ? " font-semibold bg-slate-100 text-primary hover:bg-slate-100 hover:text-primary" : " text-slate-100 hover:text-slate-100"
         }`}
     >
       <div className="flex items-center space-x-2">
-        <link.icon stroke={location.pathname.includes(link.href) ? activeIconColor : iconColor } />
-        <span>{link.title}</span>
+        <link.icon stroke={location.pathname.includes(link.href) ? activeIconColor : iconColor} />
+        {!collapsed && (
+          <span>{link.title}</span>
+        )}
       </div>
     </Link>
   );

@@ -1,6 +1,10 @@
-import { Layout, Input, Avatar, Dropdown, MenuProps, Select } from 'antd';
+import { Layout, Input, Avatar, Dropdown, MenuProps, Select, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import Search from '../assets/icons/search.svg?react'
+import {
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+} from '@ant-design/icons';
 
 const { Header } = Layout;
 
@@ -10,7 +14,7 @@ const headerStyles = {
   background: '#FFFFFF'
 }
 
-export function AppHeader({ name = 'Jon Jones' }: { name?: string }) {
+export function AppHeader({ name = 'Jon Jones', collapsed, setCollapsed }: { name?: string, collapsed: any, setCollapsed: any }) {
 
 
   const items: MenuProps['items'] = [
@@ -33,7 +37,17 @@ export function AppHeader({ name = 'Jon Jones' }: { name?: string }) {
 
   return (
     <Header style={headerStyles} className='flex justify-between sticky top-0 z-10'>
-      <Input prefix={<Search width={20} />} className='bg-slate-50' placeholder='Search' style={{ maxWidth: '400px' }} />
+      <div className='flex flex-row items-center gap-5'>
+        <Button
+          type="text"
+          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          onClick={() => setCollapsed(!collapsed)}
+          style={{
+            fontSize: '16px',
+          }}
+        />
+        <Input prefix={<Search width={20} />} className='bg-slate-50' placeholder='Search' style={{ maxWidth: '400px' }} />
+      </div>
       <div className='flex flex-row items-center gap-3'>
         <ToggleLanguage />
         {/* <Notification /> */}
