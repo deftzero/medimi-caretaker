@@ -1,84 +1,106 @@
 import { TFunction } from "i18next";
-import { IAppointmentsDashboard, IDiagnosis, IMotive, IPublicationsDashoard, IUser } from "../interfaces"
+import {
+  IAppointmentsDashboard,
+  IDiagnosis,
+  IDoctor,
+  IMotive,
+  IPublicationsDashoard,
+  IUser,
+} from "../interfaces";
 import { MenuProps } from "antd";
 import { ScriptableContext } from "chart.js";
 
-
-
 export const usersData: IUser[] = [
   {
-    id: 'U1',
-    firstName: 'John',
-    lastName: 'Smith',
-    phoneNumber: '772618212',
-    email: 'john.smith@example.com',
-    role: 'Facility Admin',
-    status: 'Active',
-    createdAt: new Date()
+    id: "U1",
+    firstName: "John",
+    lastName: "Smith",
+    phoneNumber: "772618212",
+    email: "john.smith@example.com",
+    role: "Facility Admin",
+    status: "Active",
+    createdAt: new Date(),
   },
   {
-    id: 'U2',
-    firstName: 'Alice',
-    lastName: 'Johnson',
-    phoneNumber: '722318516',
-    email: 'alice.johnson@example.com',
-    role: 'Facility Staff',
-    status: 'Active',
-    createdAt: new Date()
-  }
-]
-
+    id: "U2",
+    firstName: "Alice",
+    lastName: "Johnson",
+    phoneNumber: "722318516",
+    email: "alice.johnson@example.com",
+    role: "Facility Staff",
+    status: "Active",
+    createdAt: new Date(),
+  },
+];
 
 export const serviceOptions: any = [
   {
     id: 1,
-    name: 'Service A'
+    name: "Service A",
   },
   {
     id: 2,
-    name: 'Service B'
-  }
-]
+    name: "Service B",
+  },
+];
 export const rolesOptions = [
   { id: "Facility Staff", name: "Facility Staff" },
   { id: "Facility Admin", name: "Facility Admin" },
   { id: "Facility Manager", name: "Facility Manager" },
   { id: "Facility Technician", name: "Facility Technician" },
-  { id: "Facility Secretary", name: "Facility Secretary" }
+  { id: "Facility Secretary", name: "Facility Secretary" },
 ];
 
-const datasetsBarStyles ={
+export const doctorTypeOptions = [
+  { id: 1, name: "General Practitioner" },
+  { id: 2, name: "Cardiologist" },
+  { id: 3, name: "Radiologist" },
+];
+
+export const doctorSpecialityOptions = [
+  { id: 1, name: "Dentist" },
+  { id: 2, name: "Heart" },
+  { id: 3, name: "Psychology" },
+];
+
+export const doctorServiceOptions = [
+  { id: 1, name: "Médecine Générale" },
+];
+
+const datasetsBarStyles = {
   borderColor: "transparent",
   borderWidth: 3,
   barThickness: 20,
   maxBarThickness: 20,
   barPercentage: 0.5,
   borderRadius: 15,
-}
-export const appointmentsStatsData = (t: TFunction<"translation", undefined>) => ({
+};
+export const appointmentsStatsData = (
+  t: TFunction<"translation", undefined>
+) => ({
   labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
   datasets: [
     {
       label: t("dashboard.statsLabels.total"),
-      backgroundColor: "#2b7f75", 
+      backgroundColor: "#2b7f75",
       ...datasetsBarStyles,
       data: [10, 18, 22, 12, 14, 12, 16],
     },
     {
       label: t("dashboard.statsLabels.closed"),
-      backgroundColor: "#6ac4ae", 
+      backgroundColor: "#6ac4ae",
       ...datasetsBarStyles,
       data: [12, 16, 18, 14, 12, 14, 18],
     },
     {
       label: t("dashboard.statsLabels.pending"),
-      backgroundColor: "#f86624", 
+      backgroundColor: "#f86624",
       ...datasetsBarStyles,
       data: [8, 12, 26, 10, 10, 8, 6],
     },
     {
       label: t("dashboard.statsLabels.cancelled"),
-      backgroundColor: "#ffd66b", 
+      backgroundColor: "#ffd66b",
       ...datasetsBarStyles,
       data: [5, 6, 8, 7, 6, 5, 2],
     },
@@ -149,7 +171,7 @@ export const evolutionOfPatientFlowOptions: any = {
   },
   plugins: {
     legend: {
-      display: false
+      display: false,
     },
     tooltip: {
       mode: "index",
@@ -157,7 +179,9 @@ export const evolutionOfPatientFlowOptions: any = {
     },
   },
 };
-export const evolutionOfPatientFlowData = (t:TFunction<"translation", undefined>)=> ({
+export const evolutionOfPatientFlowData = (
+  t: TFunction<"translation", undefined>
+) => ({
   labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
   datasets: [
     {
@@ -177,7 +201,7 @@ export const evolutionOfPatientFlowData = (t:TFunction<"translation", undefined>
   ],
 });
 
-export const doughnutData = (t:TFunction<"translation", undefined>)=> ({
+export const doughnutData = (t: TFunction<"translation", undefined>) => ({
   labels: [
     t("statistics.flu"),
     t("statistics.malaria"),
@@ -209,7 +233,7 @@ export const doughnutOptions = {
   cutoutPercentage: 80,
 };
 
-export const appointmentsDashboard:IAppointmentsDashboard[] = [
+export const appointmentsDashboard: IAppointmentsDashboard[] = [
   {
     doctor: "Dr. Darlene Robertson",
     type: "Routine check-up",
@@ -227,7 +251,7 @@ export const appointmentsDashboard:IAppointmentsDashboard[] = [
   },
 ];
 
-export const publicationsDashoard:IPublicationsDashoard[] = [
+export const publicationsDashoard: IPublicationsDashoard[] = [
   {
     title: "Advancements in Neurological Research",
     facility: "Evergreen Hospital",
@@ -241,7 +265,9 @@ export const publicationsDashoard:IPublicationsDashoard[] = [
     facility: "Pinecrest Health Services",
   },
 ];
-export const appointmentsStatsDropdownItems = (t: TFunction<"translation", undefined>): MenuProps["items"] => ([
+export const appointmentsStatsDropdownItems = (
+  t: TFunction<"translation", undefined>
+): MenuProps["items"] => [
   {
     label: t("dashboard.statsView"),
     key: "1",
@@ -250,16 +276,20 @@ export const appointmentsStatsDropdownItems = (t: TFunction<"translation", undef
     label: t("dashboard.statsView"),
     key: "2",
   },
-]);
+];
 
 export const diagnosisData: IDiagnosis[] = [
-  { id: '1', wording: "Fatigue", service: "General Medicine" },
-  { id: '2', wording: "Indigestion", service: "General Medicine" },
-  { id: '3', wording: "Erythematous angina", service: "General Medicine" },
-  { id: '4', wording: "Erythematopultaceous angina", service: "General Medicine" },
-  { id: '5', wording: "Otitis externa", service: "General Medicine" },
-  { id: '6', wording: "Flu", service: "General Medicine" },
-  { id: '7', wording: "Primary hypertension", service: "General Medicine" },
+  { id: "1", wording: "Fatigue", service: "General Medicine" },
+  { id: "2", wording: "Indigestion", service: "General Medicine" },
+  { id: "3", wording: "Erythematous angina", service: "General Medicine" },
+  {
+    id: "4",
+    wording: "Erythematopultaceous angina",
+    service: "General Medicine",
+  },
+  { id: "5", wording: "Otitis externa", service: "General Medicine" },
+  { id: "6", wording: "Flu", service: "General Medicine" },
+  { id: "7", wording: "Primary hypertension", service: "General Medicine" },
 ];
 
 export const servicesDropdownOptions = [
@@ -268,12 +298,12 @@ export const servicesDropdownOptions = [
   { id: 3, name: "Pediatrics" },
   { id: 4, name: "Orthopedics" },
   { id: 5, name: "Neurology" },
-  { id: 6, name: "Oncology" }
+  { id: 6, name: "Oncology" },
 ];
 
-export const servicesData:any = [
+export const servicesData: any = [
   {
-    key: '1',
+    key: "1",
     name: "Cardiology",
     description: "Cardiology service",
     headOfService: "Dr. Sarah Johnson",
@@ -282,23 +312,23 @@ export const servicesData:any = [
       "Dental Care",
       "Cardiology",
       "Oral and Maxillofacial Surgery",
-      "Pediatric Dentistry"
+      "Pediatric Dentistry",
     ],
     expertises: [
       "Echocardiography",
       "Hypertension Management",
       "Heart Failure Management",
-      "Lipid Disorders"
+      "Lipid Disorders",
     ],
     stamp: {
       doctorName: "Dr. Emily Smith",
       medicalFacility: "Elmwood Medical Center, 123 Main Street, Anytown, USA",
       dateOfVisit: "March 18, 2024",
-      medicalLicense: "MD123456789"
-    }
+      medicalLicense: "MD123456789",
+    },
   },
   {
-    key: '2',
+    key: "2",
     name: "General Medicine",
     description: "General Medicine service",
     headOfService: "Dr. Michael Smith",
@@ -306,76 +336,76 @@ export const servicesData:any = [
     subSpecialities: [
       "Internal Medicine",
       "Preventive Care",
-      "Geriatric Medicine"
+      "Geriatric Medicine",
     ],
     expertises: [
       "Chronic Disease Management",
       "Diabetes Care",
-      "Hypertension Management"
+      "Hypertension Management",
     ],
     stamp: {
       doctorName: "Dr. Anne Marie",
       medicalFacility: "Sunrise Medical Center, 456 Oak Avenue, Anytown, USA",
       dateOfVisit: "April 10, 2024",
-      medicalLicense: "MD987654321"
-    }
-  }
+      medicalLicense: "MD987654321",
+    },
+  },
 ];
 
 export const motivesStatusOptions = [
   { id: 1, name: "Active" },
-  { id: 2, name: "Inactive" }
+  { id: 2, name: "Inactive" },
 ];
 
 export const motivesData: IMotive[] = [
   {
-    key: '1',
+    key: "1",
     wording: "Consultation",
     service: "Cardiology",
     price: "20,000",
     duration: 35,
-    status: "Active"
+    status: "Active",
   },
   {
-    key: '2',
+    key: "2",
     wording: "Taking pulse",
     service: "General medicine",
     price: "15,000",
     duration: 25,
-    status: "Active"
+    status: "Active",
   },
   {
-    key: '3',
+    key: "3",
     wording: "Annual Check up",
     service: "Cardiology",
     price: "25,000",
     duration: 20,
-    status: "Active"
+    status: "Active",
   },
   {
-    key: '4',
+    key: "4",
     wording: "Test",
     service: "Cardiology",
     price: "40,000",
     duration: 30,
-    status: "Active"
+    status: "Active",
   },
   {
-    key: '5',
+    key: "5",
     wording: "Abdominal pain",
     service: "General medicine",
     price: "90,000",
     duration: 30,
-    status: "Active"
+    status: "Active",
   },
   {
-    key: '6',
+    key: "6",
     wording: "Sore throat",
     service: "General medicine",
     price: "5,000",
     duration: 30,
-    status: "Active"
-  }
+    status: "Active",
+  },
 ];
 
 export const contactsData = [
@@ -491,5 +521,117 @@ export const messagesData = [
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     avatar: "",
     time: "1 day ago",
+  },
+];
+
+export const doctorsData: IDoctor[] = [
+  {
+    id: "SN-H1-D1-M1",
+    firstName: "Jane",
+    lastName: "Cooper",
+    service: "General medicine",
+    email: "jane.cooper@doc.com",
+    phoneNumber: "+22 29392939",
+    reviews: "50+",
+    stars: '5.0',
+    additionalRole: "Service Admin",
+    locations: [
+      {
+        name: "Dakar-Plateau Face Guiguon",
+        label: "Label",
+        longitude: 23.2423,
+        latitude: 49.2398,
+        indications: "First door",
+        city: "Dakar Plateau",
+        createdAt: new Date(),
+      },
+      {
+        name: "Fass-Ecole 2, Medina, Dakar",
+        label: "Label",
+        longitude: 23.2423,
+        latitude: 49.2398,
+        indications: "Devant Pharmacie",
+        city: "Medina",
+        createdAt: new Date(),
+      },
+    ],
+    professionalBackground: {
+      about:
+        "Dr. Jane Copper is a highly skilled and compassionate physician dedicated to providing quality healthcare services to patients. With over a decade of experience in the medical field, he specializes in internal medicine and cardiology.",
+      successRate: 98,
+      experienceYears: "3+",
+      training: [
+        {
+          year: "2002",
+          training: "Residency in Internal Medicine",
+          school: "Johns Hopkins Hospital",
+        },
+        {
+          year: "2006",
+          training: "Doctor of Medicine (MD)",
+          school: "Harvard Medical School",
+        },
+        {
+          year: "2010",
+          training: "Bachelor of Science in Biology",
+          school: "Stanford University",
+        },
+      ],
+      experties: [
+        "Echocardiography",
+        "Hypertension Management",
+        "Heart Failure Management",
+        "Lipid Disorders",
+      ],
+      subSpecialities: [
+        "Dental Care",
+        "Cardiology",
+        "Oral and Maxillofacial Surgery",
+        "Pediatric Dentistry",
+      ],
+      experience: [
+        {
+          startDate: '2010',
+          endDate: 'Present',
+          facility: 'Mercy Hospital',
+          job: 'Cardiologist',
+        },
+        {
+          startDate: '2007',
+          endDate: '2010',
+          facility: 'Harvard Medical School',
+          job: 'Internal Medicine Physician',
+        },
+        {
+          startDate: '2006',
+          endDate: '2007',
+          facility: 'Massachusetts General Hospital',
+          job: 'Internship',
+        }
+      ]
+    },
+    additionalDetails: {
+      languages: ['English', 'French'],
+      legalDetails: {
+        onms: '12939293',
+        id: 'SN-2388'
+      }
+    },
+    gallery: [
+      {
+        name: 'third meeting mom.doc',
+        url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxODczMw&ixlib=rb-4.0.3&q=40&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=480',
+        size: 2388488,
+        type: 'doc'
+      },
+      {
+        name: 'third meeting mom.pdf',
+        url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMxODczMw&ixlib=rb-4.0.3&q=40&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=480',
+        size: 2388488,
+        type: 'pdf'
+      }
+    ],
+    createdAt: new Date(),
+    status: "Active",
   },
 ];

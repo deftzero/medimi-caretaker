@@ -17,6 +17,8 @@ import InformationQueue from "../pages/caretaker/information-queue/InformationQu
 import ResetPassword from "../pages/auth/ResetPassword";
 import VerifiyCode from "../pages/auth/VerifyCode";
 import NewPassword from "../pages/auth/NewPassword";
+import Doctors from "../pages/caretaker/doctors/Doctors";
+import Doctor from "../pages/caretaker/doctors/Doctor";
 
 export const router = createBrowserRouter([
   {
@@ -99,6 +101,15 @@ export const router = createBrowserRouter([
         index: true,
         path: "/Information-queue",
         element: <InformationQueue />
+      },
+      {
+        index: true,
+        path: "/doctors",
+        element: <Doctors />
+      },
+      {
+        path: "/doctors/:id",
+        element: <Doctor />
       },
     ]
   }

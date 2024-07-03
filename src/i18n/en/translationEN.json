@@ -284,5 +284,29 @@
       "createPost": "Create Post",
       "selectPlaceholder": "Select"
     }
+  },
+  "doctors": {
+    "title": "Doctors",
+    "download": "Download",
+    "create": "Create",
+    "service": "Service",
+    "status": "Status",
+    "search": "Search",
+    "filter": "Filters",
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "service": "Service",
+      "status": "Status",
+      "actions": "Actions"
+    }
+  },
+  "doctor": {
+    "tabs": {
+      "information": {
+        "title": "Information",
+        "tabs": ""
+      }
+    }
   }
 }

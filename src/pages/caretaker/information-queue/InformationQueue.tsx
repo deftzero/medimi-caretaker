@@ -23,8 +23,8 @@ const InformationQueue = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="p-4 bg-gray-100">
-      <Title className="text-xl font-semibold mb-4">
+    <div className="bg-gray-100">
+      <Title level={3} className="text-xl font-semibold mb-4">
         {t("informationQueue.title")}
       </Title>
       <div className="bg-white p-5 rounded-md">

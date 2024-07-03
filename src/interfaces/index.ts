@@ -83,3 +83,108 @@ export interface IEvolutionModal {
   visible: boolean;
   onClose: () => void;
 }
+
+export interface IDoctor {
+  id: string;
+  firstName: string;
+  lastName: string;
+  service: string;
+  email: string;
+  phoneNumber: string;
+  reviews: string,
+  stars: string
+  additionalRole?: string;
+  locations?: IDoctorAddress[];
+  professionalBackground?: IDoctorProfessional
+  additionalDetails?: IDoctorMisc
+  gallery?: object[]
+  planning?: IDoctorPlanning[]
+  leaves?: IDoctorLeaves[]
+  createdAt?: Date;
+  status?: string
+}
+
+export interface IDoctorAddress {
+  name: string
+  label: string
+  longitude: number
+  latitude: number
+  indications: string
+  city: string
+  createdAt?: Date
+}
+
+export interface IDoctorProfessional {
+  about: string
+  successRate: number
+  experienceYears: string
+  training?: IDoctorTraining[]
+  experties: string[]
+  subSpecialities: string[]
+  experience?: IDoctorExperience[]
+}
+
+export interface IDoctorMisc {
+  languages: string []
+  legalDetails: {
+    onms: string
+    id: string
+  }
+}
+
+export interface IDoctorTraining {
+  year: string
+  training: string
+  school: string
+}
+
+export interface IDoctorExperience {
+  startDate: string
+  endDate: string
+  facility: string
+  job: string
+}
+
+export interface IDoctorPlanning {
+  weekday: string
+  begin: string
+  end: string
+  consultationType: string
+  address: string
+}
+
+export interface IDoctorLeaves {
+  startDate: string
+  endDate: string
+}
+
+
+export interface IPatients {
+  id: string;
+  firstName: string;
+  lastName: string;
+  dob: string;
+  email: string;
+  phoneNumber: string;
+  bloodType: string
+  background: string[]
+  field: string[]
+  consultations: IPatientConsultation[]
+  documents: IPatientDocument[]
+}
+
+export interface IPatientConsultation {
+  id: string
+  date: Date
+  doctor: string
+  service: string
+  type: string
+  diagnostic: string
+}
+
+export interface IPatientDocument {
+  id: string
+  type: string
+  by: string
+  service: string
+}
