@@ -159,18 +159,19 @@ export interface IDoctorLeaves {
 }
 
 
-export interface IPatients {
+export interface IPatient {
   id: string;
   firstName: string;
   lastName: string;
-  dob: string;
+  dob: Date;
   email: string;
   phoneNumber: string;
+  address: string
   bloodType: string
   background: string[]
   field: string[]
-  consultations: IPatientConsultation[]
-  documents: IPatientDocument[]
+  consultations?: IPatientConsultation[]
+  documents?: IPatientDocument[]
 }
 
 export interface IPatientConsultation {
@@ -179,6 +180,7 @@ export interface IPatientConsultation {
   doctor: string
   service: string
   type: string
+  hospital: boolean
   diagnostic: string
 }
 
@@ -186,5 +188,6 @@ export interface IPatientDocument {
   id: string
   type: string
   by: string
+  hospital: boolean
   service: string
 }

@@ -4,6 +4,7 @@ import {
   IDiagnosis,
   IDoctor,
   IMotive,
+  IPatient,
   IPublicationsDashoard,
   IUser,
 } from "../interfaces";
@@ -43,6 +44,13 @@ export const serviceOptions: any = [
     name: "Service B",
   },
 ];
+
+export const consultationOptions: any = [
+  { id: 1, name: 'Online' },
+  { id: 2, name: 'Onsite' },
+]
+
+
 export const rolesOptions = [
   { id: "Facility Staff", name: "Facility Staff" },
   { id: "Facility Admin", name: "Facility Admin" },
@@ -635,3 +643,70 @@ export const doctorsData: IDoctor[] = [
     status: "Active",
   },
 ];
+
+export const patientsData: IPatient[] = [
+  {
+    id: "SN-P-01",
+    firstName: "Alice",
+    lastName: "Hopkins",
+    dob: new Date('1995-05-25'),
+    email: "alice.hopkins@medimi.com",
+    address: "HLM Grand Yotf",
+    phoneNumber: "+229949293",
+    bloodType: "B+",
+    background: ['Covid-19', 'Hypertension'],
+    field: ['Medicine', 'Diabetes'],
+    consultations: [
+      {
+        id: "1",
+        date: new Date(),
+        doctor: "John Allen",
+        service: "Cardiology",
+        type: "Online",
+        hospital: false,
+        diagnostic: "Hypertension",
+      },
+      {
+        id: "2",
+        date: new Date(),
+        doctor: "Alice Smith",
+        service: "Cardiology",
+        type: "Online",
+        hospital: false,
+        diagnostic: "Migraine",
+      },
+      {
+        id: "3",
+        date: new Date(),
+        doctor: "Emily Davis",
+        service: "Neurology",
+        type: "Onsite",
+        hospital: true,
+        diagnostic: "Follow-up",
+      }
+    ],
+    documents: [
+      {
+        id: "1",
+        type: "Prescription",
+        by: "Dr. Yang",
+        hospital: false,
+        service: "Neurology"
+      },
+      {
+        id: "2",
+        type: "Analysis Report",
+        by: "Dr. Michael Thompson",
+        hospital: true,
+        service: "Dermatology"
+      },
+      {
+        id: "2",
+        type: "Analysis Report",
+        by: "Dr. Bob Johnson",
+        hospital: false,
+        service: "Orthopedics"
+      }
+    ]
+  }
+]

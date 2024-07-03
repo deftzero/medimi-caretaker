@@ -1,19 +1,17 @@
 import { Link, useParams } from 'react-router-dom';
 import { IDoctor } from '../../../interfaces';
-import { doctorsData } from '../../../data';
+import { consultationOptions, doctorsData, serviceOptions } from '../../../data';
 import ArrowLeft from '../../../assets/icons/arrow-left.svg?react'
 import Pencil from "../../../assets/icons/white-pencil.svg?react";
 import Trash from "../../../assets/icons/trash-black.svg?react";
 import Plus from "../../../assets/icons/plus-black.svg?react";
 
-import { Checkbox, Col, Form, Input, Row, Segmented, Space, Tabs, TabsProps, Typography } from "antd";
+import { Button, Checkbox, Col, Form, Input, Row, Segmented, Select, Space, Tabs, TabsProps, Typography } from "antd";
 import { useState } from 'react';
 import AppButton from '../../../components/ui/AppButton';
 import BasicInformation from '../../../components/doctors/BasicInformation';
 import ProfessionalBackground from '../../../components/doctors/ProfessionalBackground';
 import AdditionalDetails from '../../../components/doctors/AdditionalDetails';
-import ActionButton from '../../../components/ui/ActionButton';
-import { ACTION_COLORS } from '../../../config/constants';
 
 const { Title, Text } = Typography;
 
@@ -90,80 +88,116 @@ function InformationTab() {
   )
 }
 
+function WeekdayForm({ week }: { week: string }) {
+
+  const [form] = Form.useForm()
+
+  const onFinish = (values: any) => {
+    console.log('Received values of form:', values);
+  };
+
+  const timesList = Form.useWatch('times', form);
+
+  return (
+    <div className="bg-indigo-50 rounded-md p-5">
+      <Form
+        form={form}
+        name='weekday_form'
+        onFinish={onFinish}
+        layout='vertical'
+        requiredMark={false}
+      >
+        <Form.List name="times">
+          {(fields, { add, remove }) => (
+            <>
+              <div className="header flex flex-row justify-between items-center mb-5">
+                <Checkbox>
+                  <Text>{week}</Text>
+                </Checkbox>
+                {(timesList === undefined || timesList.length === 0) && (
+                  <Button onClick={() => add()} icon={<Plus />} />
+                )}
+              </div>
+              {fields.map(({ key, name, ...restField }) => (
+                <Row key={key} gutter={[20, 20]} justify="center">
+                  <Col span={5}>
+                    <Form.Item
+                      {...restField}
+                      name={[name, 'begin']}
+                      label="Beginning"
+                      rules={[{ required: true }]}
+                    >
+                      <Input placeholder="Beginning" />
+                    </Form.Item>
+                  </Col>
+                  <Col span={5}>
+                    <Form.Item
+                      {...restField}
+                      label="End"
+                      name={[name, 'end']}
+                      rules={[{ required: true }]}
+                    >
+                      <Input placeholder="End" />
+                    </Form.Item>
+                  </Col>
+                  <Col span={5}>
+                    <Form.Item
+                      {...restField}
+                      label="Type"
+                      name={[name, 'type']}
+                      rules={[{ required: true }]}
+                    >
+                      <Select>
+                        {consultationOptions.map((item: any) => (
+                          <Select.Option key={item.id} value={item.id}>
+                            {item.name}
+                          </Select.Option>
+                        ))}
+                      </Select>
+                    </Form.Item>
+                  </Col>
+                  <Col span={5}>
+                    <Form.Item
+                      {...restField}
+                      label="Address"
+                      name={[name, 'address']}
+                      rules={[{ required: true }]}
+                      extra="if different from the address of the structure"
+                    >
+                      <Input placeholder="Enter" />
+                    </Form.Item>
+                  </Col>
+                  <Col span={4}>
+                    <div className="mt-7 flex flex-row justify-center gap-2.5">
+                      {fields.length - 1 == name && (
+                        <Button onClick={() => add()} icon={<Plus />} />
+                      )}
+                      <Button onClick={() => remove(name)} icon={<Trash />} />
+                    </div>
+                  </Col>
+                </Row>
+
+              ))}
+            </>
+          )}
+        </Form.List>
+      </Form>
+
+    </div>
+  )
+}
 
 function PlanningTab() {
+
+  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
   return (
     <div className='space-y-5'>
-      <div className='bg-indigo-50 rounded-md p-5 space-y-5'>
+      {weekdays.map((item: string) => (
+        <WeekdayForm key={item} week={item} />
+      ))}
 
-        <Form
-          layout="vertical"
-          requiredMark={false}
-        >
-          <Row gutter={[20, 20]} justify="center">
-            <Col span={24}>
-              <Form.Item name='weekday'>
-                <Checkbox>
-                  <Text>Monday</Text>
-                </Checkbox>
-              </Form.Item>
-            </Col>
-            <Col span={5}>
-              <Form.Item
-                label='Beginning'
-                name="beginTime"
-                rules={[{ required: true }]}
-              >
-                <Input size='large' placeholder="08:00" />
-              </Form.Item>
-            </Col>
-            <Col span={5}>
-              <Form.Item
-                label='End'
-                name="endTime"
-                rules={[{ required: true }]}
-              >
-                <Input size='large' placeholder="16:00" />
-              </Form.Item>
-            </Col>
-            <Col span={5}>
-              <Form.Item
-                label='Type of appointment'
-                name="type"
-                rules={[{ required: true }]}
-              >
-                <Input size='large' />
-              </Form.Item>
-            </Col>
-            <Col span={5}>
-              <Form.Item
-                label='Address'
-                name="address"
-                rules={[{ required: true }]}
-                extra="if different from the address of the structure"
-              >
-                <Input size='large' placeholder="Enter" />
-              </Form.Item>
-            </Col>
-            <Col span={4}>
-              <Form.Item>
-                <div className="flex justify-center mt-8">
-                  <Space>
-                    <ActionButton
-                      background={ACTION_COLORS.NEUTRAL}
-                      icon={<Plus />}
-                    />
-                    <ActionButton
-                      background={ACTION_COLORS.NEUTRAL}
-                      icon={<Trash />}
-                    />
-                  </Space>
-                </div>
-              </Form.Item>
-            </Col>
-          </Row>
-
-        </Form>
+      <div className="bg-indigo-50 rounded-md p-5">
       </div>
     </div>
   )

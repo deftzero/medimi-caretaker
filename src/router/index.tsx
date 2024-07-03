@@ -19,6 +19,8 @@ import VerifiyCode from "../pages/auth/VerifyCode";
 import NewPassword from "../pages/auth/NewPassword";
 import Doctors from "../pages/caretaker/doctors/Doctors";
 import Doctor from "../pages/caretaker/doctors/Doctor";
+import Patients from "../pages/caretaker/patients/Patients";
+import Patient from "../pages/caretaker/patients/Patient";
 
 export const router = createBrowserRouter([
   {
@@ -110,6 +112,15 @@ export const router = createBrowserRouter([
       {
         path: "/doctors/:id",
         element: <Doctor />
+      },
+      {
+        index: true,
+        path: "/patients",
+        element: <Patients />
+      },
+      {
+        path: "/patients/:id",
+        element: <Patient />
       },
     ]
   }
