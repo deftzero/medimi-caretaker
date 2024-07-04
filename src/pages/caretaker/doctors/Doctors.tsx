@@ -52,18 +52,18 @@ export default function Doctors() {
     <div className="space-y-5">
       <div className="header flex flex-row justify-between items-center">
         <Title level={3} className="mt-3">
-          Doctors
+          {t("doctors.title")}
         </Title>
         <Space>
           <AppButton size="small" icon={<Download />}>
-            {t("motives.download")}
+            {t("doctors.download")}
           </AppButton>
           <AppButton
             type="primary"
             size="small"
             icon={<Plus />}
           >
-            {t("motives.create")}
+            {t("doctors.create")}
           </AppButton>
         </Space>
       </div>
@@ -71,7 +71,7 @@ export default function Doctors() {
         <Select
           value={filterService}
           onChange={handleServiceChange}
-          placeholder="Service"
+          placeholder={t("doctors.service")}
           className="w-32"
         >
           {serviceOptions.map((item: any) => (
@@ -83,7 +83,7 @@ export default function Doctors() {
         <Select
           value={filterStatus}
           onChange={handleStatusChange}
-          placeholder="Status"
+          placeholder={t("doctors.status")}
           className="w-32"
         >
           {motivesStatusOptions.map((item) => (
@@ -93,7 +93,7 @@ export default function Doctors() {
           ))}
         </Select>
         <AppButton icon={<Clear />} type="link" className="!text-slate-500" onClick={handleClearFilters}>
-          {t("motives.clearFilters")}
+          {t("doctors.clear")}
         </AppButton>
       </Space>
       <div className="content-wrapper">
@@ -101,11 +101,11 @@ export default function Doctors() {
           <div className="header flex flex-row justify-between items-center">
             <Input
               prefix={<Search />}
-              placeholder="Search..."
+              placeholder={t("doctors.search") + '...'}
               style={{ maxWidth: "300px" }}
             />
             <AppButton size="small" icon={<Filter />}>
-              Filters
+              {t("doctors.fukters")}
             </AppButton>
           </div>
 
@@ -135,27 +135,27 @@ function DoctorsTable({ data }: { data: IDoctor[] }) {
 
   const columns: TableProps<IDoctor>["columns"] = [
     {
-      title: 'ID',
+      title: t("doctors.table.id"),
       dataIndex: "id",
       key: "id",
     },
     {
-      title: 'Name',
+      title: t("doctors.table.name"),
       render: (data: IDoctor) => data.firstName + ' ' + data.lastName
     },
     {
-      title: 'Service',
+      title: t("doctors.table.service"),
       dataIndex: "service",
       key: "service",
     },
     {
-      title: 'Status',
+      title: t("doctors.table.status"),
       dataIndex: "status",
       key: "status",
       render: (value: string) => <Tag color="green">{value}</Tag>
     },
     {
-      title: t("motives.table.actions"),
+      title: t("doctors.table.actions"),
       render: (data, record) => {
         return (
           <Space>

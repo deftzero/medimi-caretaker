@@ -13,7 +13,7 @@ import ActionButton from "../../../components/ui/ActionButton";
 import { Link } from "react-router-dom";
 import { ACTION_COLORS } from "../../../config/constants";
 import { format } from "date-fns";
-import ConsultationRgisterModal from "../../../components/patients/ConsultationRegister";
+import ConsultationRegisterModal from "../../../components/patients/ConsultationRegister";
 import { useState } from "react";
 
 const { Title } = Typography;
@@ -63,7 +63,7 @@ export default function Patients() {
         </div>
         <PatientsTable data={patientsData} />
       </div>
-      <ConsultationRgisterModal
+      <ConsultationRegisterModal
         visible={visible}
         onCreate={onCreate}
         onCancel={() => setVisible(false)}

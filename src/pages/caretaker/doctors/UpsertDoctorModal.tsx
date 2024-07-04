@@ -16,7 +16,7 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
     <Modal
       open={visible}
       centered
-      title='Modification'
+      title={t("doctors.modal.modification")}
       okText={t("users.modal.okText")}
       cancelText={t("users.modal.cancelText")}
       onCancel={onCancel}
@@ -42,8 +42,8 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
         <Row gutter={[12,12]}>
           <Col span={12}>
             <Form.Item
-              label='First Name'
               name="firstName"
+              label={t("doctors.modal.firstName")}
               rules={[{ required: true }]}
             >
               <Input />
@@ -51,8 +51,8 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
           </Col>
           <Col span={12}>
             <Form.Item
-              label='Last Name'
               name="lastName"
+              label={t("doctors.modal.lastName")}
               rules={[{ required: true }]}
             >
               <Input />
@@ -62,7 +62,7 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
           <Col span={12}>
             <Form.Item
               name="type"
-              label='Type'
+              label={t("doctors.modal.type")}
               rules={[{ required: true }]}
             >
               <Select>
@@ -78,7 +78,7 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
           <Col span={12}>
             <Form.Item
               name="speciality"
-              label='Speciality'
+              label={t("doctors.modal.speciality")}
               rules={[{ required: true }]}
             >
               <Select>
@@ -94,7 +94,7 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
           <Col span={24}>
             <Form.Item
               name="presentation"
-              label='Presentation'
+              label={t("doctors.modal.presentation")}
               rules={[{ required: true }]}
             >
               <Input.TextArea rows={5} />
@@ -104,7 +104,7 @@ const UpsertDoctorModal: React.FC<IUpsertUserModal> = ({
           <Col span={24}>
             <Form.Item
               name="service"
-              label='Service'
+              label={t("doctors.modal.service")}
               rules={[{ required: true }]}
             >
               <Select>

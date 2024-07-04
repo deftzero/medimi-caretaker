@@ -292,13 +292,23 @@
     "service": "Service",
     "status": "Status",
     "search": "Search",
-    "filter": "Filters",
+    "clear": "clear",
+    "filters": "Filters",
     "table": {
       "id": "ID",
       "name": "Name",
       "service": "Service",
       "status": "Status",
       "actions": "Actions"
+    },
+    "modal": {
+      "title": "Modification",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "type": "Type",
+      "speciality": "Speciality",
+      "presentation": "Presentation",
+      "service": "Service"
     }
   },
   "doctor": {
@@ -310,6 +320,7 @@
           "basicInfo": {
             "title": "Basic Info",
             "email": "Email",
+            "reviews": "Reviews",
             "phoneNumber": "Phone Number",
             "id": "ID",
             "additionalRole": "Additional Role",
@@ -337,7 +348,7 @@
           },
           "additionalDetails": {
             "title": "Additional Details",
-            "languageSpoken": "Language Spoken",
+            "languagesSpoken": "Languages Spoken",
             "legalInformation": "Legal Information",
             "id": "ID",
             "onms": "ONMS Number",

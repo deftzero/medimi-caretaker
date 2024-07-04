@@ -3,43 +3,45 @@ import { IDoctor } from "../../interfaces";
 import { doctorsData } from "../../data";
 import Star from "../../assets/icons/star.svg?react";
 import { Avatar, Col, Row, Table, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 
 const { Title, Text } = Typography;
 
 
 export default function BasicInformation() {
   const { id } = useParams();
+  const { t } = useTranslation()
 
   const data: IDoctor = doctorsData.find((item: IDoctor) => item.id === id)!
 
   const columns = [
     {
-      title: 'Name',
+      title: t("doctor.tabs.information.basicInfo.table.name"),
       dataIndex: 'name',
       key: 'name',
     },
     {
-      title: 'Label',
+      title: t("doctor.tabs.information.basicInfo.table.label"),
       dataIndex: 'label',
       key: 'label',
     },
     {
-      title: 'Longitude',
+      title: t("doctor.tabs.information.basicInfo.table.longitude"),
       dataIndex: 'longitude',
       key: 'longitude',
     },
     {
-      title: 'Latitude',
+      title: t("doctor.tabs.information.basicInfo.table.tatitude"),
       dataIndex: 'latitude',
       key: 'latitude',
     },
     {
-      title: 'Indications',
+      title: t("doctor.tabs.information.basicInfo.table.indications"),
       dataIndex: 'indications',
       key: 'indications',
     },
     {
-      title: 'City',
+      title: t("doctor.tabs.information.basicInfo.table.city"),
       dataIndex: 'city',
       key: 'city',
     },
@@ -56,7 +58,7 @@ export default function BasicInformation() {
             <div className='flex flex-row items-center gap-1'>
               <Star />
               <Text type='secondary'>{data.stars + ' • '}</Text>
-              <Text type='secondary'>{data.reviews + ' Reviews'}</Text>
+              <Text type='secondary'>{data.reviews + ' ' + t("doctor.tabs.information.basicInfo.reviews")}</Text>
             </div>
           </div>
         </div>
@@ -65,25 +67,25 @@ export default function BasicInformation() {
             <Col span={8}>
               <Row gutter={[24, 10]}>
                 <Col span={12}>
-                  <Text type='secondary'>Email</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.email")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end w-full'>{data.email}</Text>
                 </Col>
                 <Col span={12}>
-                  <Text type='secondary'>Phone Number</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.phoneNumber")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end'>{data.phoneNumber}</Text>
                 </Col>
                 <Col span={12}>
-                  <Text type='secondary'>ID</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.id")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end'>{data.id}</Text>
                 </Col>
                 <Col span={12}>
-                  <Text type='secondary'>Additional Role</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.additionalRole")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end'>{data.additionalRole}</Text>

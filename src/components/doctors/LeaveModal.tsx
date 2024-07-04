@@ -1,7 +1,7 @@
-import { Modal, Form, Input, Select, Row, Col, DatePicker } from "antd";
+import { Modal, Form, Row, Col, DatePicker } from "antd";
 import { useTranslation } from "react-i18next";
 
-export default function ConsultationRegisterModal({
+export default function LeaveModal({
   visible,
   onCreate,
   onCancel,
@@ -13,9 +13,9 @@ export default function ConsultationRegisterModal({
     <Modal
       open={visible}
       centered
-      title={t("patients.modal.title")}
-      okText={t("patients.modal.generate")}
-      cancelText={t("patients.modal.cancel")}
+      title={t("doctor.tabs.planning.takeLeave")}
+      okText={t("doctor.tabs.planning.add")}
+      cancelText={t("doctor.tabs.planning.cancel")}
       onCancel={onCancel}
       onOk={() => {
         form
@@ -38,7 +38,7 @@ export default function ConsultationRegisterModal({
         <Row gutter={16} className="mt-4">
           <Col span={12}>
             <Form.Item
-              label={t("patients.modal.startDate")}
+              label={t("doctor.tabs.planning.startDate")}
               name="startDate"
               rules={[ { required: true } ]}
             >
@@ -47,7 +47,7 @@ export default function ConsultationRegisterModal({
           </Col>
           <Col span={12}>
             <Form.Item
-              label={t("patients.modal.endDate")}
+              label={t("doctor.tabs.planning.endDate")}
               name="endDate"
               rules={[ { required: true } ]}
             >

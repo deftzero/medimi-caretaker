@@ -1,10 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { IDoctor } from '../../../interfaces';
-import { consultationOptions, doctorsData, serviceOptions } from '../../../data';
+import { doctorsData } from '../../../data';
 import ArrowLeft from '../../../assets/icons/arrow-left.svg?react'
 import Pencil from "../../../assets/icons/white-pencil.svg?react";
-import Trash from "../../../assets/icons/trash-black.svg?react";
-import Plus from "../../../assets/icons/plus-black.svg?react";
+
 
 import { Button, Checkbox, Col, Form, Input, Row, Segmented, Select, Space, Tabs, TabsProps, Typography } from "antd";
 import { useState } from 'react';
@@ -12,6 +11,9 @@ import AppButton from '../../../components/ui/AppButton';
 import BasicInformation from '../../../components/doctors/BasicInformation';
 import ProfessionalBackground from '../../../components/doctors/ProfessionalBackground';
 import AdditionalDetails from '../../../components/doctors/AdditionalDetails';
+import { useTranslation } from 'react-i18next';
+import WeekdayForm from '../../../components/doctors/WeekdayForm';
+import LeaveModal from '../../../components/doctors/LeaveModal';
 
 const { Title, Text } = Typography;
 
@@ -19,18 +21,19 @@ const { Title, Text } = Typography;
 export default function Doctor() {
 
   const { id } = useParams();
+  const { t } = useTranslation()
 
   const data: IDoctor = doctorsData.find((item: IDoctor) => item.id === id)!
 
   const items: TabsProps['items'] = [
     {
       key: '1',
-      label: 'Information',
+      label: t("doctor.tabs.information.title"),
       children: <InformationTab />,
     },
     {
       key: '2',
-      label: 'Planning',
+      label: t("doctor.tabs.planning.title"),
       children: <PlanningTab />,
     },
   ];
@@ -55,6 +58,9 @@ export default function Doctor() {
 }
 
 function InformationTab() {
+
+  const { t } = useTranslation()
+
   const [value, setValue] = useState<string | number>('Basic Info');
 
   return (
@@ -67,7 +73,7 @@ function InformationTab() {
           size='small'
           onClick={() => { }}
         >
-          Edit
+          {t("doctor.tabs.information.edit")}
         </AppButton>
       </div>
 
@@ -88,106 +94,18 @@ function InformationTab() {
   )
 }
 
-function WeekdayForm({ week }: { week: string }) {
 
-  const [form] = Form.useForm()
-
-  const onFinish = (values: any) => {
-    console.log('Received values of form:', values);
-  };
-
-  const timesList = Form.useWatch('times', form);
-
-  return (
-    <div className="bg-indigo-50 rounded-md p-5">
-      <Form
-        form={form}
-        name='weekday_form'
-        onFinish={onFinish}
-        layout='vertical'
-        requiredMark={false}
-      >
-        <Form.List name="times">
-          {(fields, { add, remove }) => (
-            <>
-              <div className="header flex flex-row justify-between items-center mb-5">
-                <Checkbox>
-                  <Text>{week}</Text>
-                </Checkbox>
-                {(timesList === undefined || timesList.length === 0) && (
-                  <Button onClick={() => add()} icon={<Plus />} />
-                )}
-              </div>
-              {fields.map(({ key, name, ...restField }) => (
-                <Row key={key} gutter={[20, 20]} justify="center">
-                  <Col span={5}>
-                    <Form.Item
-                      {...restField}
-                      name={[name, 'begin']}
-                      label="Beginning"
-                      rules={[{ required: true }]}
-                    >
-                      <Input placeholder="Beginning" />
-                    </Form.Item>
-                  </Col>
-                  <Col span={5}>
-                    <Form.Item
-                      {...restField}
-                      label="End"
-                      name={[name, 'end']}
-                      rules={[{ required: true }]}
-                    >
-                      <Input placeholder="End" />
-                    </Form.Item>
-                  </Col>
-                  <Col span={5}>
-                    <Form.Item
-                      {...restField}
-                      label="Type"
-                      name={[name, 'type']}
-                      rules={[{ required: true }]}
-                    >
-                      <Select>
-                        {consultationOptions.map((item: any) => (
-                          <Select.Option key={item.id} value={item.id}>
-                            {item.name}
-                          </Select.Option>
-                        ))}
-                      </Select>
-                    </Form.Item>
-                  </Col>
-                  <Col span={5}>
-                    <Form.Item
-                      {...restField}
-                      label="Address"
-                      name={[name, 'address']}
-                      rules={[{ required: true }]}
-                      extra="if different from the address of the structure"
-                    >
-                      <Input placeholder="Enter" />
-                    </Form.Item>
-                  </Col>
-                  <Col span={4}>
-                    <div className="mt-7 flex flex-row justify-center gap-2.5">
-                      {fields.length - 1 == name && (
-                        <Button onClick={() => add()} icon={<Plus />} />
-                      )}
-                      <Button onClick={() => remove(name)} icon={<Trash />} />
-                    </div>
-                  </Col>
-                </Row>
-
-              ))}
-            </>
-          )}
-        </Form.List>
-      </Form>
-
-    </div>
-  )
-}
 
 function PlanningTab() {
+
+  const { t } = useTranslation()
+
+  const [visible, setVisible] = useState(false);
+  const onCreate = (values: any) => {
+    console.log("Received values of form: ", values);
+    setVisible(false);
+  };
+
 
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
@@ -197,8 +115,15 @@ function PlanningTab() {
         <WeekdayForm key={item} week={item} />
       ))}
 
-      <div className="bg-indigo-50 rounded-md p-5">
+      <div className="bg-indigo-50 rounded-md p-5 flex flex-row justify-between items-center">
+        <Title level={5}>{t("doctor.tabs.planning.holidays")}</Title>
+        <Button onClick={() => setVisible(true)}>{t("doctor.tabs.planning.takeLeave")}</Button>
       </div>
+      <LeaveModal
+        visible={visible}
+        onCreate={onCreate}
+        onCancel={() => setVisible(false)}
+      />
     </div>
   )
 }
