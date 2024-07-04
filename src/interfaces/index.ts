@@ -191,3 +191,11 @@ export interface IPatientDocument {
   hospital: boolean
   service: string
 }
+
+export interface IEvents{
+  title: string;
+  start: string;
+  end: string;
+  color: string;
+  video?: boolean;
+} 

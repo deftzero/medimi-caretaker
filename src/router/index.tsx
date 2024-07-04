@@ -21,6 +21,7 @@ import Doctors from "../pages/caretaker/doctors/Doctors";
 import Doctor from "../pages/caretaker/doctors/Doctor";
 import Patients from "../pages/caretaker/patients/Patients";
 import Patient from "../pages/caretaker/patients/Patient";
+import Agenda from "../pages/caretaker/agenda/Agenda";
 
 export const router = createBrowserRouter([
   {
@@ -121,6 +122,11 @@ export const router = createBrowserRouter([
       {
         path: "/patients/:id",
         element: <Patient />
+      },
+      {
+        index: true,
+        path: "/agenda",
+        element: <Agenda />
       },
     ]
   }

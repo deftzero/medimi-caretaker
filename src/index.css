@@ -51,3 +51,38 @@
 body {
   margin: 0;
 }
+
+
+/*
+for css vars only.
+these values are automatically known in all stylesheets.
+the :root statement itself is only included in the common stylesheet.
+this file is not processed by postcss when imported into the postcss-custom-properties plugin,
+so only write standard css!
+
+NOTE: for old browsers, will need to restart watcher after changing a variable
+*/
+
+:root {
+  --fc-border-color: #eef4f6;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #151515;
+}
+.fc .fc-scroller {
+  background-color: #f5f5f5;
+}
+.fc .fc-daygrid-day-frame {
+  background: white;
+}
+.fc .fc-daygrid-day-number {
+  color: #151515;
+}
+.fc-daygrid-dot-event {
+  display: block;
+  height: 100px;
+}
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+  margin-bottom: 0;
+}

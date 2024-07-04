@@ -434,5 +434,16 @@
         }
       }
     }
+  },
+  "agenda": {
+    "title": "Agenda",
+    "newAppointment": "New Appointment",
+    "service": "Service",
+    "doctor": "Doctor",
+    "clearAll": "Clear all",
+    "month": "Month",
+    "week": "Week",
+    "day": "Day"
   }
+   
 }
