@@ -27,18 +27,18 @@ const Dashboard = () => {
     },
   };
   return (
-    <div className="p-6">
+    <div>
       <div className="mb-8">
-        <Title level={2}>
+        <Title level={2} className="!m-0">
           {t("dashboard.title", { name: "Daniel Sullivan" })}
         </Title>
-        <Text>{t("dashboard.subTitle")}</Text>
+        <Text className="!m-0">{t("dashboard.subTitle")}</Text>
       </div>
       <Row gutter={16}>
         <Col lg={16} xs={24}>
           <Card>
             <div className="header flex flex-row justify-between items-center">
-              <Title level={3} className="m-0">
+              <Title level={3} className="m-0" >
                 {t("dashboard.appointmentsStats")}
               </Title>
               <Dropdown menu={menuProps}>
