@@ -255,5 +255,67 @@
       "createPost": "Create Post FR",
       "selectPlaceholder": "Select FR"
     }
+  },
+  "patients": {
+    "title": "Patients FR",
+    "download": "Download FR",
+    "generate": "Generate FR",
+    "search": "Search FR",
+    "services": "Servics FR",
+    "table": {
+      "name": "Name FR",
+      "dob": "Date of Birth FR",
+      "address": "Address FR",
+      "phoneNumber": "Phone Number FR",
+      "email": "Email FR",
+      "actions": "Actions FR"
+    },
+    "modal": {
+      "title": "Generation of consultaion register FR",
+      "startDate": "Start Date FR",
+      "endDate": "End Date FR",
+      "generate": "Generate FR",
+      "cancel": "Cancel FR"
+    }
+  },
+  "patient": {
+    "tabs": {
+      "information": {
+        "title": "Information FR",
+        "firstName": "First Name FR",
+        "lastName": "Last Name FR",
+        "dob": "Date of Birth FR",
+        "address": "Address FR",
+        "phoneNumber": "Phone Number FR",
+        "email": "Email FR",
+        "bloodType": "Blood Type FR",
+        "background": "Background FR",
+        "field": "Field FR"
+      },
+      "consultations": {
+        "title": "Consultation FR",
+        "search": "Search FR",
+        "filters": "Filters FR",
+        "table": {
+          "date": "Date FR",
+          "doctor": "Doctor FR",
+          "service": "Service FR",
+          "type": "Type FR",
+          "diagnostic": "Diagnostic FR",
+          "actions": "Actions FR"
+        }
+      },
+      "documents": {
+        "title": "Documents FR",
+        "search": "Search FR",
+        "filters": "Filters FR",
+        "table": {
+          "type": "Type FR",
+          "by": "By FR",
+          "service": "service FR",
+          "download": "Download FR"
+        }
+      }
+    }
   }
 }

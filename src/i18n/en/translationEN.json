@@ -284,5 +284,155 @@
       "createPost": "Create Post",
       "selectPlaceholder": "Select"
     }
+  },
+  "doctors": {
+    "title": "Doctors",
+    "download": "Download",
+    "create": "Create",
+    "service": "Service",
+    "status": "Status",
+    "search": "Search",
+    "clear": "clear",
+    "filters": "Filters",
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "service": "Service",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "modal": {
+      "title": "Modification",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "type": "Type",
+      "speciality": "Speciality",
+      "presentation": "Presentation",
+      "service": "Service"
+    }
+  },
+  "doctor": {
+    "tabs": {
+      "information": {
+        "title": "Information",
+        "edit": "Edit",
+        "tabs": {
+          "basicInfo": {
+            "title": "Basic Info",
+            "email": "Email",
+            "reviews": "Reviews",
+            "phoneNumber": "Phone Number",
+            "id": "ID",
+            "additionalRole": "Additional Role",
+            "table": {
+              "name": "Name",
+              "label": "Address Label",
+              "longitude": "Longitude",
+              "latitude": "Latitude",
+              "indications": "Indications",
+              "city": "City"
+            }
+          },
+          "professionalBackground": {
+            "title": "Professional Background",
+            "aboutDoctor": "About Doctor",
+            "successRate": "Success Rate",
+            "experience": "Experience",
+            "training": "Training",
+            "year": "Year",
+            "school": "School",
+            "subSpecialities": "Sub-specialities",
+            "exptertises": "Expertises",
+            "medicalFacility": "Medical Facility",
+            "job": "Job"
+          },
+          "additionalDetails": {
+            "title": "Additional Details",
+            "languagesSpoken": "Languages Spoken",
+            "legalInformation": "Legal Information",
+            "id": "ID",
+            "onms": "ONMS Number",
+            "gallery": "Gallery"
+          }
+        }
+      },
+      "planning": {
+        "title": "Planning",
+        "begining": "Begining",
+        "end": "End",
+        "typeOfAppointment": "Type of appointment",
+        "address": "Address",
+        "addressInfo": "if different from the address of the structure",
+        "holidays": "Holidays",
+        "requestLeave": "Request Leave",
+        "takeLeave": "Take Leave",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "cancel": "Cancel",
+        "add": "Add"
+      }
+    }
+  },
+  "patients": {
+    "title": "Patients",
+    "download": "Download",
+    "generate": "Generate",
+    "search": "Search",
+    "services": "Servics",
+    "table": {
+      "name": "Name",
+      "dob": "Date of Birth",
+      "address": "Address",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "actions": "Actions"
+    },
+    "modal": {
+      "title": "Generation of consultaion register",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "generate": "Generate",
+      "cancel": "Cancel"
+    }
+  },
+  "patient": {
+    "tabs": {
+      "information": {
+        "title": "Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "dob": "Date of Birth",
+        "address": "Address",
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "bloodType": "Blood Type",
+        "background": "Background",
+        "field": "Field"
+      },
+      "consultations": {
+        "title": "Consultation",
+        "search": "Search",
+        "filters": "Filters",
+        "table": {
+          "date": "Date",
+          "doctor": "Doctor",
+          "service": "Service",
+          "type": "Type",
+          "diagnostic": "Diagnostic",
+          "actions": "Actions"
+        }
+      },
+      "documents": {
+        "title": "Documents",
+        "search": "Search",
+        "filters": "Filters",
+        "table": {
+          "type": "Type",
+          "by": "By",
+          "service": "Service",
+          "download": "Download"
+        }
+      }
+    }
   }
 }

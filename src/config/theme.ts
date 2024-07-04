@@ -9,7 +9,7 @@ export const theme = {
     },
     Segmented: {
       itemSelectedBg: '#254F72',
-      itemSelectedColor: '#ffffff',
+      itemSelectedColor: '#ffffff'
     },
   }
 }
