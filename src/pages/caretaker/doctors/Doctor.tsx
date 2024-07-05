@@ -5,7 +5,7 @@ import ArrowLeft from '../../../assets/icons/arrow-left.svg?react'
 import Pencil from "../../../assets/icons/white-pencil.svg?react";
 
 
-import { Button, Checkbox, Col, Form, Input, Row, Segmented, Select, Space, Tabs, TabsProps, Typography } from "antd";
+import { Button, Segmented, Tabs, TabsProps, Typography } from "antd";
 import { useState } from 'react';
 import AppButton from '../../../components/ui/AppButton';
 import BasicInformation from '../../../components/doctors/BasicInformation';
@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 import WeekdayForm from '../../../components/doctors/WeekdayForm';
 import LeaveModal from '../../../components/doctors/LeaveModal';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 
 export default function Doctor() {
