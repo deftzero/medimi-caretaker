@@ -25,8 +25,7 @@ import Agenda from "../pages/caretaker/agenda/Agenda";
 
 export const router = createBrowserRouter([
   {
-    path: "/login",
-    index: true,
+    path: "/",
     element: <LoginPage />
   },
   {
@@ -42,7 +41,7 @@ export const router = createBrowserRouter([
     element: <NewPassword />
   },
   {
-    path: "/",
+    path: "/dashboard",
     element:
       <AppLayout>
         <Outlet />
@@ -54,7 +53,6 @@ export const router = createBrowserRouter([
         element: <Dashboard />
       },
       {
-        index: true,
         path: "/diagnostics",
         element: <Diagnostics />
       },
@@ -63,7 +61,6 @@ export const router = createBrowserRouter([
         element: <Diagnostic />
       },
       {
-        index: true,
         path: "/users",
         element: <Users />
       },
@@ -72,7 +69,6 @@ export const router = createBrowserRouter([
         element: <User />
       },
       {
-        index: true,
         path: "/services",
         element: <Services />
       },
@@ -81,32 +77,26 @@ export const router = createBrowserRouter([
         element: <ServiceDetails />
       },
       {
-        index: true,
         path: "/motives",
         element: <Motives />
       },
       {
-        index: true,
         path: "/statistics-indicators",
         element: <StatisticsIndicators />
       },
       {
-        index: true,
         path: "/lite-accounting",
         element: <LiteAccounting />
       },
       {
-        index: true,
         path: "/messages",
         element: <Messages />
       },
       {
-        index: true,
         path: "/Information-queue",
         element: <InformationQueue />
       },
       {
-        index: true,
         path: "/doctors",
         element: <Doctors />
       },
@@ -115,7 +105,6 @@ export const router = createBrowserRouter([
         element: <Doctor />
       },
       {
-        index: true,
         path: "/patients",
         element: <Patients />
       },
@@ -124,7 +113,6 @@ export const router = createBrowserRouter([
         element: <Patient />
       },
       {
-        index: true,
         path: "/agenda",
         element: <Agenda />
       },
