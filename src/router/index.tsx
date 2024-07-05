@@ -25,7 +25,7 @@ import Agenda from "../pages/caretaker/agenda/Agenda";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/login",
     element: <LoginPage />
   },
   {
@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
     element: <NewPassword />
   },
   {
-    path: "/dashboard",
+    path: "/",
     element:
       <AppLayout>
         <Outlet />
