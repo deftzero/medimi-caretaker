@@ -41,7 +41,7 @@ export default function Documents({ data }: { data: IPatient }) {
     },
     {
       title: t("patient.tabs.consultations.table.actions"),
-      render: (data, mainObj) => {
+      render: (data) => {
         return (
           <Space>
             <ActionButton
