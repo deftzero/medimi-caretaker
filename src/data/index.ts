@@ -3,6 +3,7 @@ import {
   IAppointmentsDashboard,
   IDiagnosis,
   IDoctor,
+  IEvents,
   IMotive,
   IPatient,
   IPublicationsDashoard,
@@ -710,3 +711,64 @@ export const patientsData: IPatient[] = [
     ]
   }
 ]
+
+export const eventsData:IEvents[] = [
+  {
+    title: "Jane Coper",
+    start: "2024-07-01T09:00:00",
+    end: "2024-07-01T09:30:00",
+    color: "#6CC1A4",
+    video: true,
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-02T09:00:00",
+    end: "2024-07-02T09:30:00",
+    color: "#6CC1A4",
+    video: true,
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-06T09:00:00",
+    end: "2024-07-06T09:30:00",
+    color: "#6CC1A4",
+    video: true,
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-08T09:00:00",
+    end: "2024-07-08T09:30:00",
+    color: "#6CC1A4",
+    video: true,
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-13T09:00:00",
+    end: "2024-07-13T09:30:00",
+    color: "#6CC1A4",
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-23T09:00:00",
+    end: "2024-07-23T09:30:00",
+    color: "#6CC1A4",
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-28T09:00:00",
+    end: "2024-07-28T09:30:00",
+    color: "#6CC1A4",
+  },
+  {
+    title: "Jhon Smith",
+    start: "2024-07-28T09:00:00",
+    end: "2024-07-28T09:30:00",
+    color: "#60A5FA",
+  },
+  {
+    title: "Mr. Jonaton",
+    start: "2024-07-26T09:00:00",
+    end: "2024-07-26T09:30:00",
+    color: "#2563EB",
+  },
+];
