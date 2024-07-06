@@ -16,32 +16,32 @@ export default function BasicInformation() {
 
   const columns = [
     {
-      title: t("doctor.tabs.information.basicInfo.table.name"),
+      title: t("doctor.tabs.information.tabs.basicInfo.table.name"),
       dataIndex: 'name',
       key: 'name',
     },
     {
-      title: t("doctor.tabs.information.basicInfo.table.label"),
+      title: t("doctor.tabs.information.tabs.basicInfo.table.label"),
       dataIndex: 'label',
       key: 'label',
     },
     {
-      title: t("doctor.tabs.information.basicInfo.table.longitude"),
+      title: t("doctor.tabs.information.tabs.basicInfo.table.longitude"),
       dataIndex: 'longitude',
       key: 'longitude',
     },
     {
-      title: t("doctor.tabs.information.basicInfo.table.tatitude"),
+      title: t("doctor.tabs.information.tabs.basicInfo.table.latitude"),
       dataIndex: 'latitude',
       key: 'latitude',
     },
     {
-      title: t("doctor.tabs.information.basicInfo.table.indications"),
+      title: t("doctor.tabs.information.tabs.basicInfo.table.indications"),
       dataIndex: 'indications',
       key: 'indications',
     },
     {
-      title: t("doctor.tabs.information.basicInfo.table.city"),
+      title: t("doctor.tabs.information.tabs.basicInfo.table.city"),
       dataIndex: 'city',
       key: 'city',
     },
@@ -58,7 +58,7 @@ export default function BasicInformation() {
             <div className='flex flex-row items-center gap-1'>
               <Star />
               <Text type='secondary'>{data.stars + ' • '}</Text>
-              <Text type='secondary'>{data.reviews + ' ' + t("doctor.tabs.information.basicInfo.reviews")}</Text>
+              <Text type='secondary'>{data.reviews + ' ' + t("doctor.tabs.information.tabs.basicInfo.reviews")}</Text>
             </div>
           </div>
         </div>
@@ -67,25 +67,25 @@ export default function BasicInformation() {
             <Col span={8}>
               <Row gutter={[24, 10]}>
                 <Col span={12}>
-                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.email")}</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.tabs.basicInfo.email")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end w-full'>{data.email}</Text>
                 </Col>
                 <Col span={12}>
-                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.phoneNumber")}</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.tabs.basicInfo.phoneNumber")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end'>{data.phoneNumber}</Text>
                 </Col>
                 <Col span={12}>
-                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.id")}</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.tabs.basicInfo.id")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end'>{data.id}</Text>
                 </Col>
                 <Col span={12}>
-                  <Text type='secondary'>{t("doctor.tabs.information.basicInfo.additionalRole")}</Text>
+                  <Text type='secondary'>{t("doctor.tabs.information.tabs.basicInfo.additionalRole")}</Text>
                 </Col>
                 <Col span={12} className='flex justify-end'>
                   <Text className='font-semibold text-end'>{data.additionalRole}</Text>

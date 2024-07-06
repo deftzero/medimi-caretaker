@@ -19,17 +19,17 @@ export default function ProfessionalBackground() {
   return (
     <div className='bg-indigo-50 rounded-md p-5 space-y-5'>
       <div className='flex flex-col gap-2.5'>
-        <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.professionalBackground.aboutDoctor")}</Title>
+        <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.tabs.professionalBackground.aboutDoctor")}</Title>
         <Text>{data.professionalBackground?.about}</Text>
       </div>
       <div className='flex flex-row gap-5'>
         <div className="bg-white py-2.5 px-5 rounded-md flex flex-col items-center gap-1">
           <Title level={4} style={{ margin: 0 }}>{data.professionalBackground?.successRate + '%'}</Title>
-          <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.successRate")}</Text>
+          <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.successRate")}</Text>
         </div>
         <div className="bg-white py-2.5 px-5 rounded-md flex flex-col items-center gap-1">
           <Title level={4} style={{ margin: 0 }}>{data.professionalBackground?.experienceYears + ' Years'}</Title>
-          <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.experience")}</Text>
+          <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.experience")}</Text>
         </div>
       </div>
       <Row gutter={[20, 20]}>
@@ -61,19 +61,19 @@ function TrainingSection({ data }: { data: any }) {
   const { t } = useTranslation()
   return (
     <>
-      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.professionalBackground.training")}</Title>
+      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.tabs.professionalBackground.training")}</Title>
       <div className='mt-5'>
         <Row>
           <Col span={16}>
             <Row gutter={[24, 10]}>
               <Col span={8}>
-                <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.year")}</Text>
+                <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.year")}</Text>
               </Col>
               <Col span={8}>
-                <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.training")}</Text>
+                <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.training")}</Text>
               </Col>
               <Col span={8}>
-                <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.school")}</Text>
+                <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.school")}</Text>
               </Col>
               {data.professionalBackground?.training?.map((item: IDoctorTraining) => (
                 <>
@@ -100,7 +100,7 @@ function SubSpecialitySection({ data }: { data: IDoctor }) {
   const { t } = useTranslation()
   return (
     <>
-      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.professionalBackground.subSpecialities")}</Title>
+      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.tabs.professionalBackground.subSpecialities")}</Title>
       <div className='mt-5 flex flex-col gap-2.5'>
         {data?.professionalBackground?.subSpecialities.map((item: string) => (
           <div className='flex flex-row gap-5 items-center'>
@@ -119,7 +119,7 @@ function ExpertiseSection({ data }: { data: IDoctor }) {
 
   return (
     <>
-      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.professionalBackground.expertises")}</Title>
+      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.tabs.professionalBackground.expertises")}</Title>
       <div className='mt-5 flex flex-col gap-2.5'>
         {data?.professionalBackground?.experties.map((item: string) => (
           <div className='flex flex-row gap-5 items-center'>
@@ -138,19 +138,19 @@ function ExperienceSection({ data }: { data: any }) {
 
   return (
     <>
-      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.professionalBackground.experience")}</Title>
+      <Title level={4} style={{ margin: 0 }}>{t("doctor.tabs.information.tabs.professionalBackground.experience")}</Title>
       <div className='mt-5'>
         <Row>
           <Col span={16}>
             <Row gutter={[24, 10]}>
               <Col span={8}>
-                <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.year")}</Text>
+                <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.year")}</Text>
               </Col>
               <Col span={8}>
-                <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.medicalFacility")}</Text>
+                <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.medicalFacility")}</Text>
               </Col>
               <Col span={8}>
-                <Text type='secondary'>{t("doctor.tabs.information.professionalBackground.job")}</Text>
+                <Text type='secondary'>{t("doctor.tabs.information.tabs.professionalBackground.job")}</Text>
               </Col>
               {data.professionalBackground?.experience?.map((item: IDoctorExperience) => (
                 <>

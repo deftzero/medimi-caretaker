@@ -256,6 +256,94 @@
       "selectPlaceholder": "Select FR"
     }
   },
+  "doctors": {
+    "title": "Doctors FR",
+    "download": "Download FR",
+    "create": "Create FR",
+    "service": "Service FR",
+    "status": "Status FR",
+    "search": "Search FR",
+    "clear": "clear FR",
+    "filters": "Filters FR",
+    "table": {
+      "id": "ID FR",
+      "name": "Name FR",
+      "service": "Service FR",
+      "status": "Status FR",
+      "actions": "Actions FR"
+    },
+    "modal": {
+      "title": "Modification FR",
+      "firstName": "First Name FR",
+      "lastName": "Last Name FR",
+      "type": "Type FR",
+      "speciality": "Speciality FR",
+      "presentation": "Presentation FR",
+      "service": "Service Fr"
+    }
+  },
+  "doctor": {
+    "tabs": {
+      "information": {
+        "title": "Information FR",
+        "edit": "Edit FR",
+        "tabs": {
+          "basicInfo": {
+            "title": "Basic Info FR",
+            "email": "Email FR",
+            "reviews": "Reviews FR",
+            "phoneNumber": "Phone Number FR",
+            "id": "ID FR",
+            "additionalRole": "Additional Role FR",
+            "table": {
+              "name": "Name FR",
+              "label": "Address Label FR",
+              "longitude": "Longitude FR",
+              "latitude": "Latitude FR",
+              "indications": "Indications FR",
+              "city": "City FR"
+            }
+          },
+          "professionalBackground": {
+            "title": "Professional Background FR",
+            "aboutDoctor": "About Doctor FR",
+            "successRate": "Success Rate FR",
+            "experience": "Experience FR",
+            "training": "Training FR",
+            "year": "Year FR",
+            "school": "School FR",
+            "subSpecialities": "Sub-specialities FR",
+            "expertises": "Expertises FR",
+            "medicalFacility": "Medical Facility FR",
+            "job": "Job FR"
+          },
+          "additionalDetails": {
+            "title": "Additional Details FR",
+            "languagesSpoken": "Languages Spoken FR",
+            "legalInformation": "Legal Information FR",
+            "id": "ID FR",
+            "onms": "ONMS Number FR",
+            "gallery": "Gallery FR"
+          }
+        }
+      },
+      "planning": {
+        "title": "Planning FR",
+        "begining": "Begining FR",
+        "end": "End FR",
+        "typeOfAppointment": "Type of appointment FR",
+        "address": "Address FR",
+        "addressInfo": "if different from the address of the structure FR",
+        "holidays": "Holidays FR",
+        "requestLeave": "Request Leave FR",
+        "takeLeave": "Take Leave FR",
+        "startDate": "Start Date FR",
+        "endDate": "End Date FR",
+        "cancel": "Cancel FR",
+        "add": "Add"
+      }
+    }
+  },
   "patients": {
     "title": "Patients FR",
     "download": "Download FR",
@@ -309,6 +397,8 @@
         "title": "Documents FR",
         "search": "Search FR",
         "filters": "Filters FR",
+        "depositDocument": "Deposit a document FR",
+        "generateDocument": "Generate a document FR",
         "table": {
           "type": "Type FR",
           "by": "By FR",

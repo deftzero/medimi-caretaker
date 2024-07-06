@@ -342,7 +342,7 @@
             "year": "Year",
             "school": "School",
             "subSpecialities": "Sub-specialities",
-            "exptertises": "Expertises",
+            "expertises": "Expertises",
             "medicalFacility": "Medical Facility",
             "job": "Job"
           },
@@ -426,6 +426,8 @@
         "title": "Documents",
         "search": "Search",
         "filters": "Filters",
+        "depositDocument": "Deposit a document",
+        "generateDocument": "Generate a document",
         "table": {
           "type": "Type",
           "by": "By",
