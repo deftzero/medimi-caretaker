@@ -722,6 +722,20 @@ export const eventsData:IEvents[] = [
   },
   {
     title: "Jane Coper",
+    start: "2024-07-01T09:30:00",
+    end: "2024-07-01T10:00:00",
+    color: "#6CC1A4",
+    video: true,
+  },
+  {
+    title: "Jane Coper",
+    start: "2024-07-01T10:00:00",
+    end: "2024-07-01T10:30:00",
+    color: "#6CC1A4",
+    video: true,
+  },
+  {
+    title: "Jane Coper",
     start: "2024-07-02T09:00:00",
     end: "2024-07-02T09:30:00",
     color: "#6CC1A4",
@@ -770,5 +784,33 @@ export const eventsData:IEvents[] = [
     start: "2024-07-26T09:00:00",
     end: "2024-07-26T09:30:00",
     color: "#2563EB",
+  },
+];
+
+export const documents = [
+  { title: "Third Meeting MOM.doc", },
+  { title: "Third Meeting MOM.doc", },
+];
+
+export const consultations = [
+  {
+    doctor: "Dr. Darlene Robertson",
+    evaluation: "Routine check-up",
+    date: "Mon, Oct 17, 09:00am - 10am",
+  },
+  {
+    doctor: "Dr. Darlene Robertson",
+    evaluation: "Symptom evaluation",
+    date: "Mon, Oct 17, 09:00am - 10am",
+  },
+  {
+    doctor: "Dr. Darlene Robertson",
+    evaluation: "Symptom evaluation",
+    date: "Mon, Oct 17, 09:00am - 10am",
+  },
+  {
+    doctor: "Dr. Darlene Robertson",
+    evaluation: "Symptom evaluation",
+    date: "Mon, Oct 17, 09:00am - 10am",
   },
 ];
