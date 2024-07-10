@@ -70,7 +70,7 @@ NOTE: for old browsers, will need to restart watcher after changing a variable
 .fc .fc-col-header-cell-cushion {
   color: #151515;
 }
-.fc .fc-scroller {
+.dayGridMonth .fc .fc-scroller {
   background-color: #f5f5f5;
 }
 .fc .fc-daygrid-day-frame {
@@ -85,4 +85,7 @@ NOTE: for old browsers, will need to restart watcher after changing a variable
 }
 .fc .fc-daygrid-body-natural .fc-daygrid-day-events {
   margin-bottom: 0;
+}
+.fc-timegrid-slot-label-frame.fc-scrollgrid-shrink-frame {
+  min-height: 100px;
 }

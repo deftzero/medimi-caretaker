@@ -435,6 +435,42 @@
       }
     }
   },
+  "appointment":{
+    "title":"Appointment",
+    "patientDetails": "Patient Details",
+    "patientDetailsData":{
+        "id":"ID",
+        "address":"Address",
+        "phoneNumber":"Phone Number",
+        "email":"Email",
+        "age":"Age"
+    },
+    "vitalInformation": "Vital Information",
+    "bloodGroup": "Blood group",
+    "background": "Background",
+    "ground": "Ground",
+    "size": "Size",
+    "weight": "Weight",
+    "preAppointmentDocuments": "Pre-appointment documents",
+    "observations": "Observations",
+    "prescriptionsTilte":"Prescriptions",
+    "prescriptions": {
+      "laboratory": "Laboratory",
+      "medicalRestCertificate": "Medical Rest Certificate",
+      "prescription": "Prescription",
+      "radiography": "Radiography"
+    },
+    "diagnostic":"Diagnostic",
+    "payment": "Payment",
+    "total": "Total",
+    "additionalCare": "Additional care",
+    "cancel": "Cancel",
+    "enclose": "Enclose",
+    "redirect": "Redirect",
+    "bookAnotherAppointment": "Book another appointment",
+    "latestConsultations": "Latest Consultations",
+    "enterHere": "Enter here"
+  },  
   "agenda": {
     "title": "Agenda",
     "newAppointment": "New Appointment",
@@ -443,7 +479,54 @@
     "clearAll": "Clear all",
     "month": "Month",
     "week": "Week",
-    "day": "Day"
+    "day": "Day",
+    "appointment": {
+      "newAppointment": "New Appointment",
+      "doctor": "Doctor",
+      "typeOfAppointment": "Type of appointment",
+      "appointmentReason": "Appointment reason",
+      "appointmentDate": "Appointment Date",
+      "appointmentTime": "Appointment Time",
+      "patients": "Patients",
+      "searchPatient": "Search patient",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "dateOfBirth": "Date of Birth",
+      "email": "Email",
+      "address": "Address",
+      "phoneNumber": "Phone Number",
+      "consultation":"Consultation",
+      "preConsultationInformation": "Pre-consultation information",
+      "selectDoctor": "Select doctor",
+      "selectType": "Select type",
+      "faceToFace": "Face-to-face",
+      "online": "Online",
+      "selectReason": "Select reason",
+      "followUpVisit": "Follow-up visit",
+      "required": "This field is required",
+      "cancel": "Cancel",
+      "create": "Create"
+    },
+    "details": {
+      "title": "Appointment Details",
+      "patientInfoTitle": "Patient Information",
+      "appointmentInfoTitle": "Appointment Information",
+      "preInfoTitle": "Pre-information Consultation",
+      "preInfoText": "Please arrive 15 minutes before your appointment time. Bring any relevant medical records or documents with you for review during the consultation.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "dateOfBirth": "Date of Birth",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "address": "Address",
+      "doctor": "Doctor",
+      "appointmentType": "Appointment Type",
+      "appointmentReason": "Appointment Reason",
+      "date": "Date",
+      "time": "Time",
+      "cancel": "Cancel",
+      "modify": "Modify",
+      "start": "Start"
+    }
   }
-   
 }

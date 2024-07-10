@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import { Select, Space, Typography } from "antd";
+import { Button, Select, Space, Typography } from "antd";
 import { useTranslation } from "react-i18next";
-import { eventsData, motivesStatusOptions, serviceOptions } from "../../../data";
+import {
+  eventsData,
+  motivesStatusOptions,
+  serviceOptions,
+} from "../../../data";
 import AppButton from "../../../components/ui/AppButton";
 import Clear from "../../../assets/icons/close.svg?react";
 import TeamMeeting from "../../../assets/icons/video-camera.svg?react";
@@ -19,26 +23,64 @@ import {
   MenuOutlined,
 } from "@ant-design/icons";
 import { ACTION_COLORS } from "../../../config/constants";
+import NewAppointmentModal from "./CreateAppointment";
+import AppointmentDetailsModal from "./AppointmentDetailsModal";
+import { format } from "date-fns";
 
-const { Text,Title } = Typography;
+const { Text, Title } = Typography;
 
 const Agenda = () => {
   const { t } = useTranslation();
+  const calendarRef = useRef<any>();
   const [currentView, setCurrentView] = useState("dayGridMonth");
+  const [date, setDate] = useState("");
+  const [newAppointmentModal, setNewAppointmentModal] = useState(false);
+  const [appointmentDetailsModal, setAppointmentDetailsModal] = useState(false);
 
-  const handleViewChange = (view: any) => {
+  const handleViewChange = (view: string) => {
+    const calendarApi = calendarRef.current.getApi();
+    calendarApi.changeView(view);
+    console.log(calendarApi.changeView(view));
     setCurrentView(view);
   };
+  const handleGetRange = () => {
+    const calendarApi = calendarRef.current.getApi();
+    const view = calendarApi.view;
+    const start = view.activeStart;
+    const end = view.activeEnd;
+    const formattedStart = format(new Date(start), "dd");
+    const formattedEnd = format(new Date(end), "dd MMM yyyy");
+    const formattedMonth = format(new Date(start), "MMM");
 
+    // Check if start and end dates are in the same month and year
+    if (
+      format(new Date(start), "MMM yyyy") === format(new Date(end), "MMM yyyy")
+    ) {
+      setDate(`${formattedStart} - ${formattedEnd}`)
+      return `${formattedStart} - ${formattedEnd}`;
+    } else {
+      setDate(`${formattedStart} ${formattedMonth} - ${formattedEnd}`)
+      return `${formattedStart} ${formattedMonth} - ${formattedEnd}`;
+    }
+  };
+  useEffect(() => {
+    handleGetRange();
+    }, [])
+  
   return (
     <div className="p-4">
       <div className="header flex flex-row justify-between items-center">
         <Title level={3} className="mt-3">
-        {t("agenda.title")}
+          {t("agenda.title")}
         </Title>
-          <AppButton type="primary" size="small" icon={<Plus />} >
+        <AppButton
+          type="primary"
+          size="small"
+          icon={<Plus />}
+          onClick={() => setNewAppointmentModal(true)}
+        >
           {t("agenda.newAppointment")}
-          </AppButton>
+        </AppButton>
       </div>
       <div className="flex justify-between items-center mb-4">
         <Space>
@@ -65,59 +107,55 @@ const Agenda = () => {
         <div className="bg-white py-5 rounded-md space-y-5">
           <div className="flex justify-between items-center mb-5 px-5">
             <Space>
-              <Text strong>08 - 14 Feb 2021</Text>
+              <Text strong>{date}</Text>
               <ActionButton
                 background={ACTION_COLORS.VIEW}
                 icon={<LeftOutlined />}
-                onClick={() => {}}
+                onClick={() => {
+                  const api = calendarRef.current.getApi();
+                  api.prev();
+                  handleGetRange();
+                }}
               />
               <ActionButton
                 background={ACTION_COLORS.VIEW}
                 icon={<RightOutlined />}
-                onClick={() => {}}
+                onClick={() => {
+                  const api = calendarRef.current.getApi();
+                  api.next();
+                  handleGetRange();
+                }}
               />
             </Space>
             <Space>
-              <ActionButton
-                background={ACTION_COLORS.VIEW}
+              <Button
                 onClick={() => handleViewChange("dayGridMonth")}
-                icon={
-                  <div className="p-1 flex justify-center items-center gap-2">
-                    <AppstoreOutlined style={{ fontSize: 16 }} />
-                    {t("agenda.month")}
-                  </div>
-                }
-              />
-              <ActionButton
-                background={ACTION_COLORS.VIEW}
-                onClick={() => handleViewChange("dayGridMonth")}
-                icon={
-                  <div className="p-1 flex justify-center items-center gap-2">
-                    <UnorderedListOutlined style={{ fontSize: 16 }} />
-                    {t("agenda.week")}
-                  </div>
-                }
-              />
-              <ActionButton
-                background={ACTION_COLORS.VIEW}
-                onClick={() => handleViewChange("dayGridMonth")}
-                icon={
-                  <div className="p-1 flex justify-center items-center gap-2">
-                    <MenuOutlined style={{ fontSize: 16 }} />
-                    {t("agenda.day")}
-                  </div>
-                }
-              />
+                className={`${currentView === "dayGridMonth" ? '!text-white !bg-primary' : '!text-black !bg-[#F3F0FE]'} h-7 border-0 rounded-md flex items-center `}
+                icon={<AppstoreOutlined style={{ fontSize: 16 }} />}
+                >
+                {t("agenda.month")}
+              </Button>
+              <Button
+                className={`${currentView === "timeGridWeek" ? '!text-white !bg-primary' : '!text-black !bg-[#F3F0FE]'} h-7 border-0 rounded-md flex items-center `}
+                icon={<UnorderedListOutlined style={{ fontSize: 16 }} />}
+              onClick={() => handleViewChange("timeGridWeek")}
+                >
+                {t("agenda.week")}
+              </Button>
+              <Button
+                className={`${currentView === "timeGridDay" ? '!text-white !bg-primary' : '!text-black !bg-[#F3F0FE]'} h-7 border-0 rounded-md flex items-center `}
+                icon={<MenuOutlined style={{ fontSize: 16 }} />}
+              onClick={() => handleViewChange("timeGridDay")}
+                >
+                {t("agenda.day")}
+              </Button>
             </Space>
           </div>
+          <div className={currentView}>
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             initialView={currentView}
-            // headerToolbar={{
-            //   left: "prev,next today",
-            //   center: "title",
-            //   right: "dayGridMonth,timeGridWeek,timeGridDay",
-            // }}
+            ref={calendarRef}
             headerToolbar={false}
             events={eventsData}
             dayMaxEventRows={true}
@@ -132,7 +170,7 @@ const Agenda = () => {
                 });
               return eventsForDay.length === 0 ? cellInfo?.dayNumberText : null;
             }}
-            eventContent={(eventInfo:any) => {
+            eventContent={(eventInfo: any) => {
               const start = new Date(eventInfo.event.start);
               const end = new Date(eventInfo.event.end);
 
@@ -143,14 +181,15 @@ const Agenda = () => {
                       ? "bg-primary"
                       : "bg-green-300"
                   } flex justify-between p-2 h-full border-0 !border-l-4 border-primary border-solid`}
+                  onClick={() => setAppointmentDetailsModal(true)}
                 >
                   <div>
                     <div className="font-bold text-white">
                       {eventInfo?.event?.title}
                     </div>
                     <div className="text-white">
-                    {start.getHours()}:
-                      {start.getMinutes().toString().padStart(2, "0")} - 
+                      {start.getHours()}:
+                      {start.getMinutes().toString().padStart(2, "0")} -
                       {end.getHours()}:
                       {end.getMinutes().toString().padStart(2, "0")}
                     </div>
@@ -162,8 +201,17 @@ const Agenda = () => {
               );
             }}
           />
+          </div>
         </div>
       </div>
+      <NewAppointmentModal
+        visible={newAppointmentModal}
+        onClose={() => setNewAppointmentModal(false)}
+      />
+      <AppointmentDetailsModal
+        visible={appointmentDetailsModal}
+        onClose={() => setAppointmentDetailsModal(false)}
+      />
     </div>
   );
 };

@@ -199,3 +199,8 @@ export interface IEvents{
   color: string;
   video?: boolean;
 } 
+
+export interface INewAppointmentModalProps {
+  visible: boolean;
+  onClose: () => void;
+}
