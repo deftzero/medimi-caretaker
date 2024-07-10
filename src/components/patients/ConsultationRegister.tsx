@@ -1,4 +1,4 @@
-import { Modal, Form, Input, Select, Row, Col, DatePicker } from "antd";
+import { Modal, Form, Row, Col, DatePicker } from "antd";
 import { useTranslation } from "react-i18next";
 
 export default function ConsultationRegisterModal({

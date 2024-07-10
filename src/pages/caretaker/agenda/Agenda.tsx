@@ -160,7 +160,7 @@ const Agenda = () => {
             events={eventsData}
             dayMaxEventRows={true}
             height="auto"
-            dayCellContent={(cellInfo) => {
+            dayCellContent={(cellInfo: any) => {
               const eventsForDay = cellInfo.view.calendar
                 .getEvents()
                 .filter((event: any) => {

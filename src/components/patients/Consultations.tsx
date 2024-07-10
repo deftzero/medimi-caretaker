@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { IPatient, IPatientConsultation } from "../../interfaces";
 import { Input, Space, Table, TableProps, Typography } from "antd";
 import { format } from "date-fns";
-import { Link } from "react-router-dom";
 import ActionButton from "../ui/ActionButton";
 import Filter from "../../assets/icons/filter-lines.svg?react";
 import Search from "../../assets/icons/search.svg?react";
@@ -53,7 +52,7 @@ export default function Consultation({ data }: { data: IPatient }) {
     },
     {
       title: t("patient.tabs.consultations.table.actions"),
-      render: (data, mainObj) => {
+      render: (data) => {
         return (
           <Space>
             <ActionButton

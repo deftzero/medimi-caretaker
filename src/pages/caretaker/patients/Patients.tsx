@@ -113,7 +113,7 @@ function PatientsTable({ data }: { data: IPatient[] }) {
     },
     {
       title: t("patients.table.actions"),
-      render: (data, mainObj) => {
+      render: (data) => {
         return (
           <Space>
             <Link

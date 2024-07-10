@@ -105,7 +105,7 @@ export default function Doctors() {
               style={{ maxWidth: "300px" }}
             />
             <AppButton size="small" icon={<Filter />}>
-              {t("doctors.fukters")}
+              {t("doctors.filters")}
             </AppButton>
           </div>
 
